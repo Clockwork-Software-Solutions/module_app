@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', App\Http\Livewire\HomePage::class)->name('home');
+Route::get('/', App\Http\Livewire\MainOptions::class)->name('main');
+Route::get('/Topic1', App\Http\Livewire\FoodChain::class)->name('foodchain');
