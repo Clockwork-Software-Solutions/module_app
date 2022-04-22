@@ -33,7 +33,7 @@ body {
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
 }
 #play-again-btn:hover {
-  //background-color: #333;
+  background-color: #333;
 }
 #play-again-btn:active {
   background-color: #555;
@@ -56,14 +56,15 @@ body {
 .draggable-elements {
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 .draggable {
-  height: 6rem;
-  width: 6rem;
+  height: 4rem;
+  width: 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-wrap: break-word;
   font-size: 5rem;
   margin: 0rem 2rem;
   cursor: move;
@@ -75,8 +76,8 @@ body {
   opacity: 0.5;
 }
 .droppable {
-  height: 7rem;
-  width: 7rem;
+  height: 4rem;
+  width: 12rem;
   margin: 1rem auto;
   display: flex;
   justify-content: center;
@@ -129,44 +130,54 @@ body {
 <div >
     <div class="p-24">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Can you make a food chain out of this?</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14">What are the order in creating a foodchain ?</h1>
         <button id="play-again-btn" class="mt-12 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   <section class="droppable-elements">
     <div class="flex">
-    <div class="droppable" data-draggable-id="sun">
-    <span id="elementText" class="" style="color: white; user-select:none;">Sun</span>
+    <div class="droppable" data-draggable-id="primary_consumers">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Primary Consumers</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="grass">
-    <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
+    <div class="droppable" data-draggable-id="producers">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Producers</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="caterpillar">
-    <span id="elementText" class="" style="color: white; user-select:none;">Caterpillar</span>
+    <div class="droppable" data-draggable-id="secondary_consumers">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Secondary Consumers</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="snake">
-    <span id="elementText" class="" style="color: white; user-select:none;">Snake</span>
+    <div class="droppable" data-draggable-id="tertiary_consumers">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Tertiary Consumers</span>
     </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="eagle">
-    <span id="elementText" class="" style="color: white; user-select:none;">Eagle</span>
+    {{-- <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
+    {{-- <div class="droppable" data-draggable-id="eagle">
+    <span id="elementText" class="" style="color: white; user-select:none;">Eagle</span> --}} 
     </div>
     <!-- <div class="droppable" data-draggable-id="spider"><span>Spider</span></div>
     <div class="droppable" data-draggable-id="horse"><span>Horse</span></div>
     <div class="droppable" data-draggable-id="hippo"><span>Hippo</span></div> -->
 </div>
+ 
   </section>
-  
-  <section class="draggable-elements px-20">
+  {{--<section class="draggable-element px-20">
+  {{-- <div clas="w-96 h-36 bg-red-300">ss</div> 
+  </section>--}}
+  <section class="draggable-elements px-20 flex">
   <!-- <div class="px-20 flex"> -->
-    
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/sun.png" alt="Sun" draggable="true"id="sun">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/grass.png" alt="Sun" draggable="true" id="grass">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/caterpillar.png" alt="Sun" draggable="true" id="caterpillar">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/snake.png" alt="Sun" draggable="true"  id="snake">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/eagle.png" alt="Sun" draggable="true"  id="eagle">
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="primary_consumers"><span class="" style="font-size: 13px; text-transform: uppercase;">Primary Consumers</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="producers"><span class="" style="font-size: 13px; text-transform: uppercase;">Producers</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="tertiary_consumers"><span class="" style="font-size: 13px; text-transform: uppercase;">Tertiary Consumers</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="secondary_consumers"><span class="" style="font-size: 13px; text-transform: uppercase;">Secondary Consumers</span></div>
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true"id="grass"> --}}
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snail.png" alt="Snail" draggable="true" id="snail">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/bird.png" alt="Bird" draggable="true" id="bird">
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snake.png" alt="Snake" draggable="true"  id="snake"> --}}
+  
+  
+  
+  
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/eagle.png" alt="Eagle" draggable="true"  id="eagle"> --}} 
     <!-- <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
     <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
     <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
@@ -177,13 +188,14 @@ body {
     <i class="fas fa-spider draggable" draggable="true" style="color: #ff99cc;" id="spider"></i> -->
     <!-- </div> -->
   </section>
+  
 
 <!-- <div id="test" class="h-full w-28 bg-green-800">
     s
 </div> -->
-<div class="mt-12 flex justify-between">
+<div class="mt-4 flex justify-between">
 <div></div>
-<button id="next" wire:click="topic2()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 hover:bg-green-700">Next</button>
+<button id="next" wire:click="topic4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -213,31 +225,66 @@ body {
 <script>
 
   $(window).on('load', function() {
+     //const textEl = document.getElementById('textTitle');
+     //const speakEl = document.getElementById('next');
+
+
+  //window.speechSynthesis.cancel();
+
+  //const text = textEl.innerText;
+  //const utterance = new SpeechSynthesisUtterance(text);
+
+  //const voices = window.speechSynthesis.getVoices();
+  //utterance.voice = voices.find(voice => voice.name === 'Google UK English');
+  //utterance.volume = 1;
+  //utterance.rate = 1;
+
+ // utterance.pitch = 1;
+  //window.speechSynthesis.speak(utterance);
+
     //set id sun to a variable
-    var sun = $('#sun');
-    var grass = $('#grass');
-    var caterpillar = $('#caterpillar');
-    var snake = $('#snake');
-    var eagle = $('#eagle');
-    //randomize the order of the elements
-    var elements = [sun, grass, caterpillar, snake, eagle];
+    var sun = $('#primary_consumers');
+    var grass = $('#producers');
+    var caterpillar = $('#secondary_consumers');
+    var snake = $('#tertiary_consumers');
+    var elements = [sun, grass, caterpillar, snake];
     var randomElements = shuffle(elements);
-    //set the order of the elements
-    //console.log(randomElements);
-    //APPEND FLEX ELEMENTS TO THE DOm
+
     $('.draggable-elements').append(randomElements);
     
-    //sun.remove().insertAfter()
-    //set random number between 0 and 5
-    // var randomNumber = Math.floor(Math.random() * 6);
-    // if(randomNumber == 0)
-    // {
+  }
 
-    // }
-   // $('#sun').remove().insertAfter($('#grass'));
-  // } else {
-  //   $('.kutija1').remove().insertBefore($('.kutija2'));
-  });
+  );
+    function speak() {
+  const textEl = document.getElementById('textTitle');
+  const speakEl = document.getElementById('next');
+
+// click handler
+//speakEl.addEventListener('click', speakText);
+
+//function speakText() {
+  // stop any speaking in progress
+  window.speechSynthesis.cancel();
+  
+  // speak text
+  const text = textEl.innerText;
+  const utterance = new SpeechSynthesisUtterance(text);
+  //select voice
+  const voices = window.speechSynthesis.getVoices();
+  utterance.voice = voices.find(voice => voice.name === 'Google UK English');
+  //set voice volume
+  utterance.volume = 1;
+  //set voice rate
+  utterance.rate = 1;
+  //set voice pitch
+  utterance.pitch = 1;
+  //speak
+  window.speechSynthesis.speak(utterance);
+//}
+
+}
+
+
 
   function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
@@ -261,7 +308,6 @@ body {
 
 
 </script>
-
 
 <script>
 let element = document.getElementById('test');
@@ -302,7 +348,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 5;
+const totalDraggableItems = 4;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -379,19 +425,22 @@ function drop(event) {
   const isCorrectMatching = draggableElementData === droppableElementData;
   total++;
   if(isCorrectMatching) {
-    const correctAudio = new Audio("storage/audio/success.mp3" );
+      //console.log(draggableElementData + " " + droppableElementData + " " + isCorrectMatching); 
+    const correctAudio = new Audio("/storage/audio/success.mp3" );
     const draggableElement = document.getElementById(draggableElementData);
+    const text = draggableElement.innerText;
     const textTitle = document.querySelector('#textTitle');
     event.target.classList.add("dropped");
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     event.target.style.backgroundColor = "transparent";
     //set color of inner element
-    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold">`+event.target.innerText+`</span>`;
+    //event.target.innerHTML = `<span class="" style="color: black; font-weight:bold">`+event.target.innerText+`</span>`;
     //event.target.innerText.color = "black";
     //window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<img src="storage/images/${draggableElementData}.png">`);
+    event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 5rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 20px 0px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
+    //event.target.insertAdjacentHTML("afterbegin", `<img src="/storage/images/${draggableElementData}.png">`);
     correct++;
     if(correct===Math.min(totalDraggableItems)) { // Game Over!!
     //draggableText.classList.remove("hidden");
@@ -404,14 +453,14 @@ function drop(event) {
       next.classList.add("next-entrance");
        anime({
             targets: [droppableElements,arrowElements],
-            scale: 1.45,
+            scale: 1.25,
             duration: 1000,
             });
     }, 50);
   } 
   }else{
     const xMax = 16;
-    const audio = new Audio("storage/audio/Quack.mp3" );
+    const audio = new Audio("/storage/audio/Quack.mp3" );
     playAudio(audio);
     //animate shake effect on wrong drop
     anime({

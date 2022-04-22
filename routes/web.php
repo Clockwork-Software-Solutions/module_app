@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', App\Http\Livewire\MainOptions::class)->name('main');
-Route::get('/Topic1', App\Http\Livewire\FoodChain::class)->name('foodchain');
+Route::get('/FoodChain&FoodWeb', App\Http\Livewire\FoodChain::class)->name('foodchain');
+Route::get('/FoodChain&FoodWeb/foodchain1', App\Http\Livewire\SecondActivity::class)->name('foodchain2');
+Route::get('/FoodChain&FoodWeb/foodchain2', App\Http\Livewire\ThirdActivity::class)->name('foodchain3');
+Route::get('/FoodChain&FoodWeb/foodchain3', App\Http\Livewire\LastActivity::class)->name('foodchain4');
+
+

@@ -10,4 +10,8 @@ class FoodChain extends Component
     {
         return view('livewire.food-chain')->layout('layouts.app');
     }
+
+    public function topic2(){
+        return redirect()->route('foodchain2');
+    }
 }

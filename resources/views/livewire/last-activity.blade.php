@@ -56,7 +56,7 @@ body {
 .draggable-elements {
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 .draggable {
   height: 6rem;
@@ -129,44 +129,45 @@ body {
 <div >
     <div class="p-24">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Can you make a food chain out of this?</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Can you make your own foodchain? TRY THIS!</h1>
         <button id="play-again-btn" class="mt-12 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
+  
   <section class="droppable-elements">
     <div class="flex">
-    <div class="droppable" data-draggable-id="sun">
-    <span id="elementText" class="" style="color: white; user-select:none;">Sun</span>
-    </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
     <div class="droppable" data-draggable-id="grass">
     <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="caterpillar">
-    <span id="elementText" class="" style="color: white; user-select:none;">Caterpillar</span>
+    <div class="droppable" data-draggable-id="snail">
+    <span id="elementText" class="" style="color: white; user-select:none;">Snail</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="snake">
-    <span id="elementText" class="" style="color: white; user-select:none;">Snake</span>
+    <div class="droppable" data-draggable-id="bird">
+    <span id="elementText" class="" style="color: white; user-select:none;">Bird</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
     <div class="droppable" data-draggable-id="eagle">
     <span id="elementText" class="" style="color: white; user-select:none;">Eagle</span>
     </div>
+    {{-- <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
+    {{-- <div class="droppable" data-draggable-id="eagle">
+    <span id="elementText" class="" style="color: white; user-select:none;">Eagle</span> --}} 
+    </div>
     <!-- <div class="droppable" data-draggable-id="spider"><span>Spider</span></div>
     <div class="droppable" data-draggable-id="horse"><span>Horse</span></div>
     <div class="droppable" data-draggable-id="hippo"><span>Hippo</span></div> -->
 </div>
+ 
   </section>
   
   <section class="draggable-elements px-20">
   <!-- <div class="px-20 flex"> -->
-    
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/sun.png" alt="Sun" draggable="true"id="sun">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/grass.png" alt="Sun" draggable="true" id="grass">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/caterpillar.png" alt="Sun" draggable="true" id="caterpillar">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/snake.png" alt="Sun" draggable="true"  id="snake">
-    <img class="draggable bg-white" style="color: #fff;" src="storage/images/eagle.png" alt="Sun" draggable="true"  id="eagle">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true"id="grass">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snail.png" alt="Snail" draggable="true" id="snail">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/bird.png" alt="Bird" draggable="true" id="bird">
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snake.png" alt="Snake" draggable="true"  id="snake"> --}}
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/eagle.png" alt="Eagle" draggable="true"  id="eagle">
     <!-- <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
     <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
     <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
@@ -181,9 +182,9 @@ body {
 <!-- <div id="test" class="h-full w-28 bg-green-800">
     s
 </div> -->
-<div class="mt-12 flex justify-between">
+<div class="mt-4 flex justify-between">
 <div></div>
-<button id="next" wire:click="topic2()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 hover:bg-green-700">Next</button>
+<button id="next" wire:click="topic3()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -302,7 +303,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 5;
+const totalDraggableItems = 4;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -379,7 +380,7 @@ function drop(event) {
   const isCorrectMatching = draggableElementData === droppableElementData;
   total++;
   if(isCorrectMatching) {
-    const correctAudio = new Audio("storage/audio/success.mp3" );
+    const correctAudio = new Audio("/storage/audio/success.mp3" );
     const draggableElement = document.getElementById(draggableElementData);
     const textTitle = document.querySelector('#textTitle');
     event.target.classList.add("dropped");
@@ -391,7 +392,7 @@ function drop(event) {
     //window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<img src="storage/images/${draggableElementData}.png">`);
+    event.target.insertAdjacentHTML("afterbegin", `<img src="/storage/images/${draggableElementData}.png">`);
     correct++;
     if(correct===Math.min(totalDraggableItems)) { // Game Over!!
     //draggableText.classList.remove("hidden");
@@ -411,7 +412,7 @@ function drop(event) {
   } 
   }else{
     const xMax = 16;
-    const audio = new Audio("storage/audio/Quack.mp3" );
+    const audio = new Audio("/storage/audio/Quack.mp3" );
     playAudio(audio);
     //animate shake effect on wrong drop
     anime({
