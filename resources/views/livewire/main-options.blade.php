@@ -10,7 +10,7 @@
     <div class="flex-1 min-w-0">
       <button wire:click="topic1()" class="focus:outline-none">
         <span class="absolute inset-0" aria-hidden="true"></span>
-        <p class="text-sm font-medium text-white">Topic 1</p>
+        <p class="text-sm font-medium text-white">Food Chain & Food Web</p>
         <!-- <p class="text-sm text-gray-500 truncate">3 Activities</p> -->
       </button>
     </div>

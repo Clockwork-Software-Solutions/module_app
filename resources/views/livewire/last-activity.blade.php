@@ -77,7 +77,7 @@ body {
 .droppable {
   height: 7rem;
   width: 7rem;
-  margin: 1rem auto;
+  margin: 1rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,26 +129,26 @@ body {
 <div >
     <div class="p-24">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Can you make your own foodchain? TRY THIS!</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Can you make your own foodchain? TRY THIS!</h1>
         <button id="play-again-btn" class="mt-12 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   
   <section class="droppable-elements">
-    <div class="flex">
+    <div class="flex justify-center">
+    {{-- <div class="droppable" data-draggable-id="grass">
+    <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
+    </div>
+    <div class="arrow fas fa-arrow-right my-auto text-xl"></div> --}}
     <div class="droppable" data-draggable-id="grass">
     <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="snail">
-    <span id="elementText" class="" style="color: white; user-select:none;">Snail</span>
+    <div class="droppable" data-draggable-id="cow">
+    <span id="elementText" class="" style="color: white; user-select:none;">Cow</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="bird">
-    <span id="elementText" class="" style="color: white; user-select:none;">Bird</span>
-    </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="eagle">
-    <span id="elementText" class="" style="color: white; user-select:none;">Eagle</span>
+    <div class="droppable" data-draggable-id="tiger">
+    <span id="elementText" class="" style="color: white; user-select:none;">Tiger</span>
     </div>
     {{-- <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
     {{-- <div class="droppable" data-draggable-id="eagle">
@@ -164,10 +164,10 @@ body {
   <section class="draggable-elements px-20">
   <!-- <div class="px-20 flex"> -->
     <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true"id="grass">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snail.png" alt="Snail" draggable="true" id="snail">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/bird.png" alt="Bird" draggable="true" id="bird">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/cow.png" alt="Cow" draggable="true" id="cow">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/tiger.png" alt="Tiger" draggable="true" id="tiger">
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snake.png" alt="Snake" draggable="true"  id="snake"> --}}
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/eagle.png" alt="Eagle" draggable="true"  id="eagle">
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/eagle.png" alt="Eagle" draggable="true"  id="eagle"> --}}
     <!-- <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
     <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
     <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
@@ -203,6 +203,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s; --}}
 </div>
+<div class="loader"></div>
 </div>
 
 
@@ -215,13 +216,13 @@ body {
 
   $(window).on('load', function() {
     //set id sun to a variable
-    var sun = $('#sun');
+    //var sun = $('#sun');
     var grass = $('#grass');
-    var caterpillar = $('#caterpillar');
-    var snake = $('#snake');
-    var eagle = $('#eagle');
+    var cow = $('#cow');
+    var tiger = $('#tiger');
+    //var eagle = $('#eagle');
     //randomize the order of the elements
-    var elements = [sun, grass, caterpillar, snake, eagle];
+    var elements = [grass, cow, tiger];
     var randomElements = shuffle(elements);
     //set the order of the elements
     //console.log(randomElements);
@@ -303,7 +304,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 4;
+const totalDraggableItems = 3;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
