@@ -10,4 +10,10 @@ class LastActivity extends Component
     {
         return view('livewire.last-activity')->layout('layouts.app');
     }
+
+    public function topic4()
+    {
+        //redirect to the next topic
+        return redirect()->route('foodchain5');
+    }
 }

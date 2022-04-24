@@ -129,7 +129,7 @@ body {
 <div >
     <div class="p-24">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Can you make your own foodchain? TRY THIS!</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Try another one.</h1>
         <button id="play-again-btn" class="mt-12 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   
@@ -139,16 +139,16 @@ body {
     <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div> --}}
-    <div class="droppable" data-draggable-id="grass">
-    <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
+    <div class="droppable" data-draggable-id="plant">
+    <span id="elementText" class="" style="color: white; user-select:none;">Plant</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="cow">
-    <span id="elementText" class="" style="color: white; user-select:none;">Cow</span>
+    <div class="droppable" data-draggable-id="goat">
+    <span id="elementText" class="" style="color: white; user-select:none;">Goat</span>
     </div>
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="tiger">
-    <span id="elementText" class="" style="color: white; user-select:none;">Tiger</span>
+    <div class="droppable" data-draggable-id="lion">
+    <span id="elementText" class="" style="color: white; user-select:none;">Lion</span>
     </div>
     {{-- <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
     {{-- <div class="droppable" data-draggable-id="eagle">
@@ -163,9 +163,9 @@ body {
   
   <section class="draggable-elements px-20">
   <!-- <div class="px-20 flex"> -->
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true"id="grass">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/cow.png" alt="Cow" draggable="true" id="cow">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/tiger.png" alt="Tiger" draggable="true" id="tiger">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/lion.png" alt="Lion" draggable="true"id="lion">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/goat.png" alt="Goat" draggable="true" id="goat">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/plant.png" alt="Plant" draggable="true" id="plant">
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snake.png" alt="Snake" draggable="true"  id="snake"> --}}
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/eagle.png" alt="Eagle" draggable="true"  id="eagle"> --}}
     <!-- <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
@@ -217,12 +217,12 @@ body {
   $(window).on('load', function() {
     //set id sun to a variable
     //var sun = $('#sun');
-    var grass = $('#grass');
-    var cow = $('#cow');
-    var tiger = $('#tiger');
+    var lion = $('#lion');
+    var goat = $('#goat');
+    var plant = $('#plant');
     //var eagle = $('#eagle');
     //randomize the order of the elements
-    var elements = [grass, cow, tiger];
+    var elements = [lion,goat,plant];
     var randomElements = shuffle(elements);
     //set the order of the elements
     //console.log(randomElements);

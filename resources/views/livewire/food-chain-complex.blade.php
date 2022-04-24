@@ -15,7 +15,7 @@ body {
 
 #play-again-btn {
   position: absolute;
-  top: 2.5rem;
+  top: 1.5rem;
   left: 55%;
   margin-left: -50px;
   font-size: 1rem;
@@ -77,7 +77,7 @@ body {
 .droppable {
   height: 7rem;
   width: 7rem;
-  margin: 1rem 5rem;
+  margin: 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,6 +87,7 @@ body {
   font-weight: bold;
   background-color: #fff;
   border: 3px dashed #111;
+  border-radius: 50%;
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .droppable span {
@@ -127,64 +128,119 @@ body {
 }
 </style>
 <div >
-    <div class="p-24">
+    <div class="p-8">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Can you make your own foodchain? TRY THIS!</h1>
-        <button id="play-again-btn" class="mt-12 bg-green-800 hover:bg-green-700">Play Again</button>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Let's try a more complex food chain.</h1>
+        <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
-  
+  <div class="flex px-10">
+    <section class="draggable-elements px-20">
+    <div class="elems grid grid-cols-3 gap-2">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/light.png" alt="Light" draggable="true"id="light">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true" id="grass">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/consumers.png" alt="Consumers" draggable="true" id="consumers">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/consumers2.png" alt="Lion" draggable="true"id="consumers2">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/decomposers.png" alt="Goat" draggable="true" id="decomposers">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/dead_animals.png" alt="Plant" draggable="true" id="dead_animals">
+    </div>
+  </section>
+
+
+
   <section class="droppable-elements">
     <div class="flex justify-center">
-    {{-- <div class="droppable" data-draggable-id="grass">
-    <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
-    </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div> --}}
-    <div class="droppable" data-draggable-id="grass">
-    <span id="elementText" class="" style="color: white; user-select:none;">Grass</span>
-    </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="cow">
-    <span id="elementText" class="" style="color: white; user-select:none;">Cow</span>
-    </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    <div class="droppable" data-draggable-id="tiger">
-    <span id="elementText" class="" style="color: white; user-select:none;">Tiger</span>
-    </div>
-    {{-- <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
-    {{-- <div class="droppable" data-draggable-id="eagle">
-    <span id="elementText" class="" style="color: white; user-select:none;">Eagle</span> --}} 
-    </div>
-    <!-- <div class="droppable" data-draggable-id="spider"><span>Spider</span></div>
-    <div class="droppable" data-draggable-id="horse"><span>Horse</span></div>
-    <div class="droppable" data-draggable-id="hippo"><span>Hippo</span></div> -->
-</div>
- 
-  </section>
   
-  <section class="draggable-elements px-20">
-  <!-- <div class="px-20 flex"> -->
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true"id="grass">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/cow.png" alt="Cow" draggable="true" id="cow">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/tiger.png" alt="Tiger" draggable="true" id="tiger">
-    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snake.png" alt="Snake" draggable="true"  id="snake"> --}}
-    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/eagle.png" alt="Eagle" draggable="true"  id="eagle"> --}}
-    <!-- <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
-    <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
-    <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
-    <i class="fas fa-fish draggable" draggable="true" style="color: #9966ff;" id="fish"></i>
-    <i class="fas fa-frog draggable" draggable="true" style="color: #4bc0c0;" id="frog"></i> -->
-    <!-- <i class="fas fa-horse draggable" draggable="true" style="color: #333333;" id="horse"></i>
-    <i class="fas fa-hippo draggable" draggable="true" style="color: #ff9f40;" id="hippo"></i>
-    <i class="fas fa-spider draggable" draggable="true" style="color: #ff99cc;" id="spider"></i> -->
-    <!-- </div> -->
+    <div class="droppable" data-draggable-id="light">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Light</span>
+    </div>
+    <div class="arrow fas fa-arrow-right my-auto invisible text-xl transform rotate-45 mt-28 p-0"></div>
+    {{-- <div class="droppable invisible" data-draggable-id="plant">
+    <span id="elementText" class="" style="color: white; user-select:none;">Plant</span>
+    </div> --}}
+        <div class="arrow fas invisible fa-arrow-right my-auto text-xl"></div>
+
+    {{-- <div class="arrow fas fa-arrow-right my-auto text-xl"></div> --}}
+    <div class="droppable" data-draggable-id="consumers">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Consumers</span>
+    </div>
+    <div class="arrow fas invisible fa-arrow-right my-auto text-xl"></div>
+    <div class="droppable invisible" data-draggable-id="lion">
+    <span id="elementText" class="" style="color: white; user-select:none;">Lion</span>
+    </div>
+  
+    </div>
+    <div class="flex justify-center">
+    <div>
+            <div class="arrow fas fa-arrow-down ml-2 mr-10 my-auto text-xl -rotate-45"></div>
+    </div>
+     <div>
+            <div class="arrow fas fa-arrow-up ml-12 mr-16 my-auto text-xl transform rotate-45"></div>
+    </div>
+     <div>
+            <div class="arrow fas fa-arrow-down mx-16 my-auto text-xl transform -rotate-45"></div>
+    </div>
+    </div>
+    <div class="flex justify-center">
+  
+    <div class="droppable" data-draggable-id="grass">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Producers</span>
+    </div>
+    <div class="arrow fas fa-arrow-up invisible my-auto text-xl mb-28 transform rotate-45"></div>
+        <div class="arrow fas fa-arrow-right invisible my-auto text-xl"></div>
+        {{-- <div class="arrow fas fa-arrow-right invisible my-auto text-xl"></div> --}}
+
+    {{-- <div class="droppable invisible" data-draggable-id="goat">
+    <span id="elementText" class="" style="color: white; user-select:none;">Goat</span>
+    </div> --}}
+    <div class="arrow fas fa-arrow-right invisible my-auto text-xl"></div>
+    <div class="droppable" data-draggable-id="consumers2">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Consumers</span>
+    </div>
+  
+    </div>
+     <div class="flex justify-center">
+    <div>
+            <div class="arrow fas fa-arrow-up ml-2 my-auto text-xl"></div>
+    </div>
+     <div>
+            <div class="arrow fas fa-arrow-up ml-16 mr-20 my-auto text-xl transform rotate-45 invisible"></div>
+    </div>
+     <div>
+            <div class="arrow fas fa-arrow-down ml-20 mr-10 my-auto text-xl"></div>
+    </div>
+    </div>
+     <div class="flex justify-center">
+  
+    <div class="droppable" data-draggable-id="decomposers">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Decomposers</span>
+    </div>
+    <div class="arrow fas fa-arrow-up invisible my-auto text-xl mb-28 transform rotate-45"></div>
+    {{-- <div class="droppable invisible" data-draggable-id="goat">
+    <span id="elementText" class="" style="color: white; user-select:none;">Goat</span>
+    </div> --}}
+        <div class="arrow fas fa-arrow-left my-auto mx-2 text-xl"></div>
+
+    <div class="arrow fas fa-arrow-right invisible my-auto text-xl"></div>
+    <div class="droppable" data-draggable-id="dead_animals">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Dead Animals</span>
+    </div>
+  
+    </div>
+
+</div>
+<div class="flex justify-end">
+ <button id="next" wire:click="topic4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
+  <div></div>
+  </div>
   </section>
+  </div>
+  
 
 <!-- <div id="test" class="h-full w-28 bg-green-800">
     s
 </div> -->
 <div class="mt-4 flex justify-between">
 <div></div>
-<button id="next" wire:click="topic4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -203,7 +259,6 @@ body {
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s; --}}
 </div>
-<div class="loader"></div>
 </div>
 
 
@@ -217,17 +272,20 @@ body {
   $(window).on('load', function() {
     //set id sun to a variable
     //var sun = $('#sun');
+    var light = $('#light');
     var grass = $('#grass');
-    var cow = $('#cow');
-    var tiger = $('#tiger');
+    var consumers = $('#consumers');
+     var consumers2 = $('#consumers2');
+    var decomposers = $('#decomposers');
+    var dead_animals = $('#dead_animals');
     //var eagle = $('#eagle');
     //randomize the order of the elements
-    var elements = [grass, cow, tiger];
+    var elements = [light,grass,consumers,consumers2,decomposers,dead_animals];
     var randomElements = shuffle(elements);
     //set the order of the elements
     //console.log(randomElements);
     //APPEND FLEX ELEMENTS TO THE DOm
-    $('.draggable-elements').append(randomElements);
+    $('.elems').append(randomElements);
     
     //sun.remove().insertAfter()
     //set random number between 0 and 5
@@ -304,7 +362,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 3;
+const totalDraggableItems = 6;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -388,7 +446,7 @@ function drop(event) {
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     event.target.style.backgroundColor = "transparent";
     //set color of inner element
-    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold">`+event.target.innerText+`</span>`;
+    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold; visibility: visible;">`+event.target.innerText+`</span>`;
     //event.target.innerText.color = "black";
     //window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
@@ -405,8 +463,8 @@ function drop(event) {
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({
-            targets: [droppableElements,arrowElements],
-            scale: 1.45,
+            targets: droppableElements,
+            scale: 0.95,
             duration: 1000,
             });
     }, 50);
