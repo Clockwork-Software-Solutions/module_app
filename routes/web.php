@@ -20,6 +20,14 @@ Route::get('/FoodChain&FoodWeb/foodchain2', App\Http\Livewire\ThirdActivity::cla
 Route::get('/FoodChain&FoodWeb/foodchain3', App\Http\Livewire\LastActivity::class)->name('foodchain4');
 Route::get('/FoodChain&FoodWeb/foodchain4', App\Http\Livewire\LastActivity2::class)->name('foodchain5');
 Route::get('/FoodChain&FoodWeb/complex_foodchain', App\Http\Livewire\FoodChainComplex::class)->name('foodchain6');
+Route::get('/FoodChain&FoodWeb/complex_foodchain2', App\Http\Livewire\FoodChainComplexSecond::class)->name('foodchain7');
+Route::get('/FoodChain&FoodWeb/complex_foodchain3', App\Http\Livewire\FoodChainComplexThird::class)->name('foodchain8');
+Route::get('/FoodChain&FoodWeb/foodweb', App\Http\Livewire\FoodWeb::class)->name('foodweb');
+Route::get('/FoodChain&FoodWeb/foodweb2', App\Http\Livewire\FoodWebSecond::class)->name('foodweb2');
+
+
+
+
 
 
 

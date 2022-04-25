@@ -10,4 +10,9 @@ class FoodChainComplex extends Component
     {
         return view('livewire.food-chain-complex');
     }
+
+    public function topic5()
+    {
+       return redirect()->route('foodchain7');
+    }
 }
