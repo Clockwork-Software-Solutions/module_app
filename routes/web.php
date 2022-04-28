@@ -32,6 +32,12 @@ Route::get('/Symbiosis&NonSymbiosis/commensalism', App\Http\Livewire\Commensalis
 Route::get('/Symbiosis&NonSymbiosis/mutualism', App\Http\Livewire\Mutualism::class)->name('mutualism');
 Route::get('/Symbiosis&NonSymbiosis/competitionForResources', App\Http\Livewire\Competition::class)->name('competition');
 Route::get('/Symbiosis&NonSymbiosis/competitionAndPredation', App\Http\Livewire\CompetitionLast::class)->name('lastcompetition');
+Route::get('/Symbiosis&NonSymbiosis/bioticAndAbiotic', App\Http\Livewire\BioticAndAbiotic::class)->name('biotic');
+Route::get('/Symbiosis&NonSymbiosis/bioticAndAbioticLast', App\Http\Livewire\BioticAndAbioticLast::class)->name('bioticLast');
+Route::get('/Symbiosis&NonSymbiosis/bacteriaAndAnimals', App\Http\Livewire\BacteriaAndAnimals::class)->name('bacteria');
+
+
+
 
 
 

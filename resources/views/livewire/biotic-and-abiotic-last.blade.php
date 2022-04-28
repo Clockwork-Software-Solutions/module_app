@@ -54,7 +54,7 @@ body {
 }
 
 .draggable-elements {
-  display: flex;
+ 
   justify-content: center;
   margin-top: 2rem;
 }
@@ -123,13 +123,13 @@ body {
 
 #div1 {
   width: 610px;
-  height: 150px;
+  height: 350px;
   padding: 10px;
 
 }
 #div2 {
   width: 610px;
-  height: 150px;
+  height: 350px;
   padding: 10px;
 
   /*border: 1px solid #aaaaaa;*/
@@ -143,21 +143,21 @@ body {
 <div >
     <div class="p-6">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Try another one</h1>
+  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Here's another set</h1>
         <button id="play-again-btn" class="bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   
   <section class="droppable-elements">
     <div class="grid grid-cols-2">
-    <div class="col-span-1 border border-black text-center font-bold p-2"><span id="title">Competition</span>
+    <div class="col-span-1 border border-black text-center font-bold p-2"><span id="title">Biotic</span>
     </div>
-    <div class="col-span-1 border border-black text-center font-bold p-2">Predation
+    <div class="col-span-1 border border-black text-center font-bold p-2">Abiotic
     </div>
-    <div id="" class="col-span-1 border border-black p-5 h-60">
+    <div id="" class="col-span-1 border border-black p-5 h-96">
     <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
     </div>
     </div>
-    <div id="" class="col-span-1 border border-black p-5 h-60">
+    <div id="" class="col-span-1 border border-black p-5 h-96">
     <div id="div2" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
     </div>
     </div>
@@ -198,13 +198,17 @@ body {
   </section>
   
   <section class="draggable-elements px-20 mb-5">
-  <div class="flex px-10">
-  <img id="drag1" class="mx-3" src="/storage/images/seals.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
-  <img id="drag2" class="mx-3" src="/storage/images/birds.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
-  <img id="drag3" class="mx-3" src="/storage/images/deers.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
-  <img id="drag4" class="mx-3" src="/storage/images/tigers.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
-  <img id="drag5" class="mx-3" src="/storage/images/bears.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
-  <img id="drag6" class="mx-3" src="/storage/images/wolfs.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+  <div class="elems grid gap-6 grid-cols-6 px-10">
+  <img id="drag1" class="mx-3 rounded-full col-span-1" src="/storage/images/protists.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag2" class="mx-3 rounded-full col-span-1" src="/storage/images/plants.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag3" class="mx-3 rounded-full col-span-1" src="/storage/images/animals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag4" class="mx-3 rounded-full col-span-1" src="/storage/images/bacteria.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag5" class="mx-3 rounded-full col-span-1" src="/storage/images/fungus.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag6" class="mx-3 rounded-full col-span-1" src="/storage/images/water.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag7" class="mx-3 rounded-full col-span-1" src="/storage/images/soil.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag8" class="mx-3 rounded-full col-span-1" src="/storage/images/air.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag9" class="mx-3 rounded-full col-span-1" src="/storage/images/minerals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  <img id="drag10" class="mx-3 rounded-full col-span-1" src="/storage/images/light.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/lion.png" alt="Lion" draggable="true"id="lion"> --}}
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/competition.png" alt="Goat" draggable="true" id="competition">
     <img class="draggable bg-white" style="color: #fff;" src="/storage/images/predation.png" alt="Plant" draggable="true" id="predation"> --}}
@@ -213,7 +217,7 @@ body {
 
 <div class="mt-0 flex justify-between">
 <div></div>
-<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
+<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -252,14 +256,18 @@ body {
     var drag4 = $('#drag4');
     var drag5 = $('#drag5');
     var drag6 = $('#drag6');
+    var drag7 = $('#drag7');
+    var drag8 = $('#drag8');
+    var drag9 = $('#drag9');
+    var drag10 = $('#drag10');
     //var eagle = $('#eagle');
     //randomize the order of the elements
-    var elements = [drag1, drag2, drag3, drag4, drag5, drag6];
+    var elements = [drag1, drag2, drag3, drag4, drag5, drag6, drag7, drag8, drag9, drag10];
     var randomElements = shuffle(elements);
     //set the order of the elements
     //console.log(randomElements);
     //APPEND FLEX ELEMENTS TO THE DOm
-    $('.draggable-elements').append(randomElements);
+    $('.elems').append(randomElements);
     
     //sun.remove().insertAfter()
     //set random number between 0 and 5
@@ -334,11 +342,11 @@ function allowDrop(ev) {
 }
 
 
-function drag(ev) {
+function drag(ev) {  
   ev.dataTransfer.setData("text", ev.target.id);
 }
   let corrects = 0;
-const totalDraggableItem = 6;
+const totalDraggableItem = 10;
  const correctAudio = new Audio("/storage/audio/success.mp3" );
 function drop(ev) {
   ev.preventDefault();
@@ -346,7 +354,8 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   var divId = ev.target.id;
 
-    if((divId === "div1" && data === "drag1") || (divId === "div1" && data === "drag2") || (divId === "div1" && data === "drag3")){
+    if((divId === "div1" && data === "drag1") || (divId === "div1" && data === "drag2") || (divId === "div1" && data === "drag3") || (divId === "div1" && data === "drag4") || (divId === "div1" && data === "drag5")){
+
         ev.target.appendChild(document.getElementById(data));
         //make the draggable false
         document.getElementById(data).draggable = false;
@@ -367,7 +376,7 @@ function drop(ev) {
                   });
           }, 50);
          }
-    }else if((divId === "div2" && data === "drag4") || (divId === "div2" && data === "drag5") || (divId === "div2" && data === "drag6")){
+    }else if((divId === "div2" && data === "drag6") || (divId === "div2" && data === "drag7") || (divId === "div2" && data === "drag8") || (divId === "div2" && data === "drag9") || (divId === "div2" && data === "drag10")){
       ev.target.appendChild(document.getElementById(data));
         //make the draggable false
         document.getElementById(data).draggable = false;
