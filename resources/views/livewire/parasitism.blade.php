@@ -58,7 +58,7 @@ body {
 .draggable-elements {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0rem;
   max-height: 100vh;
 }
 .draggable {
@@ -133,7 +133,7 @@ body {
 <div >
     <div class="p-8">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another example.</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Try this symbiosis relatioship.</h1>
   <div class="">
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
@@ -141,32 +141,59 @@ body {
 
     <section class="draggable-elements">
 
-    <div class="elems grid grid-cols-3 gap-x-10 gap-y-32">
-    <div id="one" class="text-center">
-    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px;">Fox</span>
+    <div class="elems grid grid-cols-2 gap-40">
+    <div class="elems-left col-span-1">
+    <div id="one" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
+    <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Pig</span>
+    <div class="flex justify-center">
+    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/pig.png" alt="Light" draggable="false">
     </div>
-    <div id="two" class="text-center">
-    <img id="second" class="draggable bg-white" style="color: #fff; background-color: transparent; " src="/storage/images/bird.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 110px">Bird</span>
+    <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Have lots of digested food in the intestine</span>
     </div>
-     <div id="three" class="text-center">
-    <img id="third" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 150px" src="/storage/images/cat.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Cat</span>
+
+    <div id="two" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
+    <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Mistletoe</span>
+    <div class="flex justify-center">
+    <img id = "second" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/mistletoe.png" alt="Light" draggable="false">
     </div>
-    <div id="four" class="text-center">
-    <img id="fourth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/slug.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Slug</span>
+    <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Type of plant that sucks nutrients out of trees</span>
     </div>
-    <div id="five" class="text-center">
-    <img id="fifth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/grass.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Grass</span>
+
+    <div id="three" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
+    <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Fish</span>
+    <div class="flex justify-center">
+    <img id = "third" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fish.png" alt="Light" draggable="false">
     </div>
-    <div id="six" class="text-center">
-    <img id="last" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/rabbit.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Rabbit</span>
+    <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Live in the water and have blood</span>
     </div>
-   
+    </div>
+
+    <div class="elems-right col-span-1">
+    <div id="four" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
+    <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Tapeworm</span>
+    <div class="flex justify-center">
+    <img id = "fourth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/tapeworm.png" alt="Light" draggable="false">
+    </div>
+    <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Need to eat food that is already digested</span>
+    </div>
+
+    <div id="five" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
+    <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Oak Tree</span>
+    <div class="flex justify-center">
+    <img id = "fifth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/tree.png" alt="Light" draggable="false">
+    </div>
+    <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Big tree with lots of nutrients</span>
+    </div>
+
+    <div id="six" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
+    <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Leech</span>
+    <div class="flex justify-center">
+    <img id = "sixth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/leech.png" alt="Light" draggable="false">
+    </div>
+    <span id="elementText" class="text-sm bold break-words" style="color: black; user-select:none;">Live in the water and suck blood from animals that live in the water</span>
+    </div>
+    </div>
+
     </div>
    
   </section>
@@ -176,7 +203,7 @@ body {
   <section class="droppable-elements">
    <div class="flex justify-end">
   <div></div>
-      <button id="next" wire:click="foodweb3()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
+      <button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
 </div>
   </section>
   </div>
@@ -220,7 +247,9 @@ body {
       //if event is null
       event.preventDefault();
   //get id
-  var id = event.target.id;
+   var parent = event.target.parentNode;
+   // console.log();
+  var id = parent.parentNode.id;
   
  
   if(arr.length != 1)
@@ -232,26 +261,29 @@ body {
     arr.push(id);
      var first = document.getElementById(arr[0]);
      var second = document.getElementById(arr[1]);
-    // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
+      
 
 //if right connection draw line
-if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "fourth") || (arr[0] == "fifth" && arr[1] == "last") || (arr[0] == "last" && arr[1] == "third") || (arr[0] == "last" && arr[1] == "first"))
+if((arr[0] == "one" && arr[1] == "four") || (arr[0] == "two" && arr[1] == "five") || (arr[0] == "three" && arr[1] == "six"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
   arr=[];
   ctr++;
-  if(ctr >= 7){
+  if(ctr >= 3){
     //console.log(playAgainBtn + " " + nextBtn + " " + textTitle);
     playAgainBtn.style.display = "block";
     nextBtn.style.display = "block";
     textTitle.innerText = "Good Job! This is the correct order.";
+    const correctAudio = new Audio("/storage/audio/success.mp3" );
+    
     setTimeout(() => {
       //playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
+      playAudio(correctAudio);
        anime({
-            targets: [document.getElementById('one'), document.getElementById('two'), document.getElementById('three'), document.getElementById('four')],
-            scale: .99,
+            targets: [document.getElementById('one'), document.getElementById('two'), document.getElementById('three'), document.getElementById('four'), document.getElementById('five'), document.getElementById('six')],
+            scale: .90,
             duration: 1000,
             });
     }, 50);
@@ -266,6 +298,8 @@ line.show('draw', {
 })
  
 }else{
+    //get parent of clicked image
+   
   const xMax = 16;
     const audio = new Audio("/storage/audio/Quack.mp3" );
     playAudio(audio);
@@ -315,18 +349,20 @@ line.show('draw', {
     var first = $('#one');
     var second = $('#two');
     var third = $('#three');
+
     var fourth = $('#four');
     var fifth = $('#five');
-    var last = $('#six');
+    var sixth = $('#six');
    
 
-    var elements = [first, second, third, fourth, fifth, last];
+    var elements = [first, second, third];
+    var elements2 = [fourth, fifth, sixth];
+
     var randomElements = shuffle(elements);
-    randomElements[1].addClass('mt-16');
-    randomElements[4].addClass('mt-16');
-      //var elmId = $("#test").attr("id");
-  //console.log(randomElements[1].attr("class") + " " + );
-    $('.elems').append(randomElements);
+    var randomElements2 = shuffle(elements2);
+
+    $('.elems-left').append(randomElements);
+    $('.elems-right').append(randomElements2);
 
   });
 

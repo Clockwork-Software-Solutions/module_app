@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-screen bg-gray-100">
 
 <head>
 
@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="h-full">
+<body class="h-full bg-gray-100">
     <div class="min-h-full">
         
 

@@ -24,6 +24,22 @@ Route::get('/FoodChain&FoodWeb/complex_foodchain2', App\Http\Livewire\FoodChainC
 Route::get('/FoodChain&FoodWeb/complex_foodchain3', App\Http\Livewire\FoodChainComplexThird::class)->name('foodchain8');
 Route::get('/FoodChain&FoodWeb/foodweb', App\Http\Livewire\FoodWeb::class)->name('foodweb');
 Route::get('/FoodChain&FoodWeb/foodweb2', App\Http\Livewire\FoodWebSecond::class)->name('foodweb2');
+Route::get('/FoodChain&FoodWeb/foodwebcomplex', App\Http\Livewire\FoodWebComplex::class)->name('foodweb3');
+Route::get('/FoodChain&FoodWeb/foodwebcomplex_final', App\Http\Livewire\FoodWebComplexLast::class)->name('foodweb4');
+Route::get('/Symbiosis&NonSymbiosis', App\Http\Livewire\SymbiosisAndNonsymbiosis::class)->name('symbiosis');
+Route::get('/Symbiosis&NonSymbiosis/parasitism', App\Http\Livewire\Parasitism::class)->name('parasitism');
+Route::get('/Symbiosis&NonSymbiosis/commensalism', App\Http\Livewire\Commensalism::class)->name('commensalism');
+Route::get('/Symbiosis&NonSymbiosis/mutualism', App\Http\Livewire\Mutualism::class)->name('mutualism');
+Route::get('/Symbiosis&NonSymbiosis/competitionForResources', App\Http\Livewire\Competition::class)->name('competition');
+Route::get('/Symbiosis&NonSymbiosis/competitionAndPredation', App\Http\Livewire\CompetitionLast::class)->name('lastcompetition');
+
+
+
+
+
+
+
+
 
 
 

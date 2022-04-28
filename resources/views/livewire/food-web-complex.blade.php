@@ -11,6 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #eee;
   color: #111;
+  max-height: 100vh;
 }
 
 #play-again-btn {
@@ -56,16 +57,17 @@ body {
 }
 
 .draggable-elements {
-  display: flex;
-  justify-content: center;
+  /*display: flex; 
+  justify-content: center;*/
   margin-top: 1rem;
   max-height: 100vh;
+  width: 100%
 }
 .draggable {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   font-size: 5rem;
   margin: 0rem 2rem;
@@ -133,7 +135,7 @@ body {
 <div >
     <div class="p-8">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another example.</h1>
+  <h1 id="textTitle" class="text-3xl mb-5 mx-14 ">Here's a more complex food web.</h1>
   <div class="">
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
@@ -141,12 +143,92 @@ body {
 
     <section class="draggable-elements">
 
-    <div class="elems grid grid-cols-3 gap-x-10 gap-y-32">
-    <div id="one" class="text-center">
-    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px;">Fox</span>
+    <div class="elems grid grid-cols-6 gap-x-2 gap-y-10 items-center">
+    <div id="one" class="col-span-1 text-center px-10 font-bold text-xs">
+    {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
+        <span id="elementText" class="" style="color: black; user-select:none;">Tertiary Consumers :</span>
     </div>
-    <div id="two" class="text-center">
+    <div id="one" class="col-start-3 col-end-5 col-span-3">
+    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/osprey.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Osprey</span>
+    </div>
+    <div id="one" class="col-span-2">
+    <img id = "second" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/bald_eagle.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Bald Eagle</span>
+    </div>
+    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
+        <span id="elementText" class="" style="color: black; user-select:none;">Secondary Consumers :</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "third" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/seagull.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Gulls and Terns</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "fourth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/wading_bird.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Wading Birds</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "fifth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/large_fish.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 5px;">Large Piscivorous Fish</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "sixth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/sea_duck.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Sea Ducks</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "seventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/swan.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 20px;">Tundra Swan</span>
+    </div>
+      <div id="one" class="col-span-1 text-center px-10 font-bold text-xs">
+    {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
+        <span id="elementText" class="" style="color: black; user-select:none;">Primary Consumers :</span>
+    </div>
+    <div id ="one" class="col-start-3 col-end-5 col-span-3">
+    <img id = "eighth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/small_fish.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 0px;">Small Planktivorous Fish</span>
+    </div>
+    <div id="one" class="col-span-2">
+    <img id = "ninth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/bivalves.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Bivalves</span>
+    </div>
+    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
+        <span id="elementText" class="" style="color: black; user-select:none;">Herbivores :</span>
+    </div>
+    <div id="one" class="col-span-2">
+    <img id = "tenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/zooplankton.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 20px;">Zooplankton</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "eleventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/benthic.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 10px;">Benthic Invertebrates</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "twelvth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/herbivore_duck.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 10px;">Herbivorous Ducks</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "thirtheenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/geese.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 0px;">Geese and Mute Swans</span>
+    </div>
+    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
+        <span id="elementText" class="" style="color: black; user-select:none;">Primary Producers :</span>
+    </div>
+    <div id="one" class="col-span-2 col-start-3 col-end-4 ">
+    <img id = "fourteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/phyoplankton.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 20px;">Phytoplankton</span>
+    </div>
+    <div id="one" class="col-span-1">
+    <img id = "fiftheenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/sav.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold " style="color: black; user-select:none; margin-left: 0px;">Submerged Aquatic Vegetation (SAV)</span>
+    </div>
+    <div id="one" class="col-span-2">
+    <img id = "sixteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/vegetation.png" alt="Light" draggable="false">
+        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 30px;">Vegetation</span>
+    </div>
+    {{-- <div id="two" class="text-center">
     <img id="second" class="draggable bg-white" style="color: #fff; background-color: transparent; " src="/storage/images/bird.png" alt="Grass" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 110px">Bird</span>
     </div>
@@ -165,7 +247,7 @@ body {
     <div id="six" class="text-center">
     <img id="last" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/rabbit.png" alt="Consumers" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Rabbit</span>
-    </div>
+    </div> --}}
    
     </div>
    
@@ -176,7 +258,7 @@ body {
   <section class="droppable-elements">
    <div class="flex justify-end">
   <div></div>
-      <button id="next" wire:click="foodweb3()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
+      <button id="next" wire:click="backToMain()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
 </div>
   </section>
   </div>
@@ -235,12 +317,21 @@ body {
     // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
 
 //if right connection draw line
-if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "fourth") || (arr[0] == "fifth" && arr[1] == "last") || (arr[0] == "last" && arr[1] == "third") || (arr[0] == "last" && arr[1] == "first"))
+if((arr[0] == "fifth" && arr[1] == "first") || (arr[0] == "fifth" && arr[1] == "second") 
+|| (arr[0] == "sixth" && arr[1] == "second") || (arr[0] == "eighth" && arr[1] == "third") 
+|| (arr[0] == "eighth" && arr[1] == "fourth") || (arr[0] == "eighth" && arr[1] == "fifth") 
+|| (arr[0] == "ninth" && arr[1] == "sixth") || (arr[0] == "ninth" && arr[1] == "seventh") 
+|| (arr[0] == "ninth" && arr[1] == "seventh") || (arr[0] == "ninth" && arr[1] == "twelvth") 
+|| (arr[0] == "tenth" && arr[1] == "eighth") || (arr[0] == "tenth" && arr[1] == "ninth") 
+|| (arr[0] == "eleventh" && arr[1] == "sixth") || (arr[0] == "fourteenth" && arr[1] == "eighth")
+|| (arr[0] == "fourteenth" && arr[1] == "eleventh") || (arr[0] == "fourteenth" && arr[1] == "ninth")
+|| (arr[0] == "fiftheenth" && arr[1] == "twelvth") || (arr[0] == "sixteenth" && arr[1] == "seventh")
+|| (arr[0] == "sixteenth" && arr[1] == "thirtheenth"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
   arr=[];
   ctr++;
-  if(ctr >= 7){
+  if(ctr >= 18){
     //console.log(playAgainBtn + " " + nextBtn + " " + textTitle);
     playAgainBtn.style.display = "block";
     nextBtn.style.display = "block";
@@ -322,11 +413,11 @@ line.show('draw', {
 
     var elements = [first, second, third, fourth, fifth, last];
     var randomElements = shuffle(elements);
-    randomElements[1].addClass('mt-16');
-    randomElements[4].addClass('mt-16');
+    //randomElements[1].addClass('mt-16');
+    //randomElements[4].addClass('mt-16');
       //var elmId = $("#test").attr("id");
   //console.log(randomElements[1].attr("class") + " " + );
-    $('.elems').append(randomElements);
+    //$('.elems').append(randomElements);
 
   });
 

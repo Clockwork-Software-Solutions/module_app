@@ -15,7 +15,7 @@ body {
 
 #play-again-btn {
   position: absolute;
-  top: 1.5rem;
+  top: 2.5rem;
   left: 55%;
   margin-left: -50px;
   font-size: 1rem;
@@ -33,7 +33,7 @@ body {
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
 }
 #play-again-btn:hover {
-  //background-color: #333;
+  background-color: #333;
 }
 #play-again-btn:active {
   background-color: #555;
@@ -44,13 +44,11 @@ body {
 }
 
 #next{
-
   display: none;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
 }
 #next.next-entrance {
-
   opacity: 1;
   transform: translateX(2rem);
 }
@@ -58,29 +56,29 @@ body {
 .draggable-elements {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  max-height: 100vh;
+  margin-top: 2rem;
 }
 .draggable {
-  height: 6rem;
-  width: 6rem;
+  height: 4rem;
+  width: 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-wrap: break-word;
   font-size: 5rem;
   margin: 0rem 2rem;
   cursor: pointer;
   transition: opacity 0.2s;
-  border: none;
+  border: solid black 2px;
   padding: 4px;
 }
 .draggable:hover {
   opacity: 0.5;
 }
 .droppable {
-  height: 7rem;
-  width: 7rem;
-  margin: 1rem 1rem;
+  height: 4rem;
+  width: 12rem;
+  margin: 1rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +88,6 @@ body {
   font-weight: bold;
   background-color: #fff;
   border: 3px dashed #111;
-  border-radius: 50%;
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .droppable span {
@@ -131,57 +128,39 @@ body {
 }
 </style>
 <div >
-    <div class="p-8">
+    <div class="p-10">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another example.</h1>
-  <div class="">
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Getting started with this example.</h1>
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
-  </div>
-
-    <section class="draggable-elements">
-
-    <div class="elems grid grid-cols-3 gap-x-10 gap-y-32">
-    <div id="one" class="text-center">
-    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px;">Fox</span>
-    </div>
-    <div id="two" class="text-center">
-    <img id="second" class="draggable bg-white" style="color: #fff; background-color: transparent; " src="/storage/images/bird.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 110px">Bird</span>
-    </div>
-     <div id="three" class="text-center">
-    <img id="third" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 150px" src="/storage/images/cat.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Cat</span>
-    </div>
-    <div id="four" class="text-center">
-    <img id="fourth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/slug.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Slug</span>
-    </div>
-    <div id="five" class="text-center">
-    <img id="fifth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/grass.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Grass</span>
-    </div>
-    <div id="six" class="text-center">
-    <img id="last" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/rabbit.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Rabbit</span>
-    </div>
-   
-    </div>
-   
+  <section class="droppable-elements flex justify-center bg-blue-600 border rounded-lg">
+  <video width="400" height="400" autoplay loop>
+  <source src="/storage/videos/nemo.mp4" type="video/mp4">
+  {{-- <iframe class="" src="/storage/videos/nemo.mp4" type="video/mp4"></iframe> --}}
+  {{-- <source src="movie.ogg" type="video/ogg"> --}}
+  Your browser does not support the video tag.
+</video>
+ 
   </section>
-
-
-
-  <section class="droppable-elements">
-   <div class="flex justify-end">
-  <div></div>
-      <button id="next" wire:click="foodweb3()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
-</div>
-  </section>
+  {{--<section class="draggable-element px-20">
+  {{-- <div clas="w-96 h-36 bg-red-300">ss</div> 
+  </section>--}}
+  <div class="pt-10">
+  <h2 class="text-md font-bold">Question: What is their relationship?</h2>
   </div>
+  <section class="draggable-elements px-20 flex"> 
+     <div draggable="false" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="mutualism"><span class="pointer-events-none" style="font-size: 13px; text-transform: uppercase;">Mutualism</span></div>
+    <div draggable="false" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="commensalism"><span class="pointer-events-none" style="font-size: 13px; text-transform: uppercase;">Commensalism</span></div>
+    <div draggable="false" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="parasitism"><span class="pointer-events-none" style="font-size: 13px; text-transform: uppercase;">Parasitism</span></div>
+  </section>
+  
 
-
+<!-- <div id="test" class="h-full w-28 bg-green-800">
+    s
+</div> -->
+<div class="mt-2 flex justify-between">
+<div></div>
+<button id="next" wire:click="nextTopic()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -211,67 +190,103 @@ body {
 <script>
 
   $(window).on('load', function() {
-    var arr = [];
-    var ctr = 0;
+ 
+    var mutualism = $('#mutualism');
+    var commensalism = $('#commensalism');
+    var parasitism = $('#parasitism');
+    var elements = [mutualism, commensalism, parasitism];
+    var randomElements = shuffle(elements);
+
+    $('.draggable-elements').append(randomElements);
+    
+  }
+
+  );
+    function speak() {
+  const textEl = document.getElementById('textTitle');
+  const speakEl = document.getElementById('next');
+
+// click handler
+//speakEl.addEventListener('click', speakText);
+
+//function speakText() {
+  // stop any speaking in progress
+  window.speechSynthesis.cancel();
+  
+  // speak text
+  const text = textEl.innerText;
+  const utterance = new SpeechSynthesisUtterance(text);
+  //select voice
+  const voices = window.speechSynthesis.getVoices();
+  utterance.voice = voices.find(voice => voice.name === 'Google UK English');
+  //set voice volume
+  utterance.volume = 1;
+  //set voice rate
+  utterance.rate = 1;
+  //set voice pitch
+  utterance.pitch = 1;
+  //speak
+  window.speechSynthesis.speak(utterance);
+//}
+
+}
+
+
+
+  function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+
+//function button click
+$('.draggable').click(function(){
+    //get id of clicked
+    const textTitle = document.querySelector('#textTitle');
     const playAgainBtn = document.querySelector("#play-again-btn");
     const nextBtn = document.querySelector("#next");
-    const textTitle = document.querySelector('#textTitle');
-    $('.elems').click(function(event) {
-      //if event is null
-      event.preventDefault();
-  //get id
-  var id = event.target.id;
-  
- 
-  if(arr.length != 1)
-  {
-    arr.push(id);
-  }
-  else
-  {
-    arr.push(id);
-     var first = document.getElementById(arr[0]);
-     var second = document.getElementById(arr[1]);
-    // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
-
-//if right connection draw line
-if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "fourth") || (arr[0] == "fifth" && arr[1] == "last") || (arr[0] == "last" && arr[1] == "third") || (arr[0] == "last" && arr[1] == "first"))
-{
-  var line = new LeaderLine(first, second, {hide: true, dash: true});
-  arr=[];
-  ctr++;
-  if(ctr >= 7){
-    //console.log(playAgainBtn + " " + nextBtn + " " + textTitle);
-    playAgainBtn.style.display = "block";
-    nextBtn.style.display = "block";
-    textTitle.innerText = "Good Job! This is the correct order.";
-    setTimeout(() => {
-      //playAudio(correctAudio);
+    const correctAudio = new Audio("/storage/audio/success.mp3" );
+    var id = $(this).attr('id');
+    if(id == "mutualism")
+    {
+        //green color hex code
+        //$(this).css('background-color', '#00ff00');
+        const target = document.querySelector("#mutualism");
+          playAgainBtn.style.display = "block";
+          nextBtn.style.display = "block";
+          textTitle.innerText = "Good Job! You got the correct answer.";
+         setTimeout(() => {
+      playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({
-            targets: [document.getElementById('one'), document.getElementById('two'), document.getElementById('three'), document.getElementById('four')],
-            scale: .99,
+            targets: target,
+            scale: 1.25,
             duration: 1000,
+            backgroundColor: 'rgb(22 101 52)',
+            color: '#fff',
             });
     }, 50);
-  }
-line.show('draw', {
-  startPlug: 'behind',
-  endPlug: 'behind',
-  animOptions: {
-    duration: 3000,
-    timing: [0.5, 0, 1, 0.42],
-  }
-})
- 
-}else{
-  const xMax = 16;
+    }else{
+    const xMax = 16;
     const audio = new Audio("/storage/audio/Quack.mp3" );
     playAudio(audio);
     //animate shake effect on wrong drop
     anime({
-      targets: [first, second],
+      targets: event.target,
     easing: 'easeInOutSine',
     duration: 400,
     borderColor: [
@@ -303,56 +318,12 @@ line.show('draw', {
     }
     ], // All properties except 'scale' inherit 250ms delay
       });
-    arr=[];
-}
-
-
-  }
+    }
 });
 
 
 
-    var first = $('#one');
-    var second = $('#two');
-    var third = $('#three');
-    var fourth = $('#four');
-    var fifth = $('#five');
-    var last = $('#six');
-   
-
-    var elements = [first, second, third, fourth, fifth, last];
-    var randomElements = shuffle(elements);
-    randomElements[1].addClass('mt-16');
-    randomElements[4].addClass('mt-16');
-      //var elmId = $("#test").attr("id");
-  //console.log(randomElements[1].attr("class") + " " + );
-    $('.elems').append(randomElements);
-
-  });
-
-  function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex != 0) {
-
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}
-
-
-
-
 </script>
-
 
 <script>
 let element = document.getElementById('test');
@@ -383,7 +354,7 @@ anime({
 });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/leader-line"></script>
+
 
 
 
@@ -393,7 +364,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 6;
+const totalDraggableItems = 4;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -470,19 +441,22 @@ function drop(event) {
   const isCorrectMatching = draggableElementData === droppableElementData;
   total++;
   if(isCorrectMatching) {
+      //console.log(draggableElementData + " " + droppableElementData + " " + isCorrectMatching); 
     const correctAudio = new Audio("/storage/audio/success.mp3" );
     const draggableElement = document.getElementById(draggableElementData);
+    const text = draggableElement.innerText;
     const textTitle = document.querySelector('#textTitle');
     event.target.classList.add("dropped");
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     event.target.style.backgroundColor = "transparent";
     //set color of inner element
-    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold; visibility: visible;">`+event.target.innerText+`</span>`;
+    //event.target.innerHTML = `<span class="" style="color: black; font-weight:bold">`+event.target.innerText+`</span>`;
     //event.target.innerText.color = "black";
     //window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<img src="/storage/images/${draggableElementData}.png">`);
+    event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 5rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 20px 0px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
+    //event.target.insertAdjacentHTML("afterbegin", `<img src="/storage/images/${draggableElementData}.png">`);
     correct++;
     if(correct===Math.min(totalDraggableItems)) { // Game Over!!
     //draggableText.classList.remove("hidden");
@@ -494,8 +468,8 @@ function drop(event) {
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({
-            targets: droppableElements,
-            scale: 0.95,
+            targets: [droppableElements,arrowElements],
+            scale: 1.25,
             duration: 1000,
             });
     }, 50);
@@ -547,7 +521,5 @@ function playAudio(audio) {
  audio.play();
 }
   </script>
-      <script src=""></script>
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     </div>

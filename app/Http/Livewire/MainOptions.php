@@ -15,4 +15,8 @@ class MainOptions extends Component
     public function topic1(){
         return redirect()->route('foodchain');
     }
+
+    public function topic2(){
+        return redirect()->route('symbiosis');
+    }
 }

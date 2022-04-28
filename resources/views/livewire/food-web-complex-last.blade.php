@@ -11,6 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #eee;
   color: #111;
+  max-height: 100vh;
 }
 
 #play-again-btn {
@@ -56,16 +57,17 @@ body {
 }
 
 .draggable-elements {
-  display: flex;
-  justify-content: center;
+  /*display: flex; 
+  justify-content: center;*/
   margin-top: 1rem;
   max-height: 100vh;
+  width: 100%
 }
 .draggable {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   font-size: 5rem;
   margin: 0rem 2rem;
@@ -133,7 +135,7 @@ body {
 <div >
     <div class="p-8">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another example.</h1>
+  <h1 id="textTitle" class="text-3xl mb-5 mx-14 ">Here's another complex food web.</h1>
   <div class="">
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
@@ -141,31 +143,76 @@ body {
 
     <section class="draggable-elements">
 
-    <div class="elems grid grid-cols-3 gap-x-10 gap-y-32">
-    <div id="one" class="text-center">
-    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px;">Fox</span>
+    <div class="elems ml-20">
+    <div class="grid grid-cols-5 items-center gap-x-10 mb-24 gap-y-10">
+    <div id="one" class="col-start-2 col-end-3 col-span-1 place-self-end text-center px-10 font-bold text-xs">
+    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/wolf.png" alt="Light" draggable="false">
+        <span id="elementText" class="" style="color: black; user-select:none;">Wolf</span>
     </div>
-    <div id="two" class="text-center">
-    <img id="second" class="draggable bg-white" style="color: #fff; background-color: transparent; " src="/storage/images/bird.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 110px">Bird</span>
+    <div id="one" class=" col-span-1 font-bold text-xs">
+    <img id = "second" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/mountain_lion.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-7" style="color: black; user-select:none;">Mountain Lion</span>
     </div>
-     <div id="three" class="text-center">
-    <img id="third" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 150px" src="/storage/images/cat.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Cat</span>
+    <div id="one" class="col-span-1  font-bold text-xs">
+    <img id = "third" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/cat.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-14" style="color: black; user-select:none;">Cat</span>
     </div>
-    <div id="four" class="text-center">
-    <img id="fourth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/slug.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Slug</span>
     </div>
-    <div id="five" class="text-center">
-    <img id="fifth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/grass.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Grass</span>
+    <div class="grid grid-cols-5 items-center gap-x-0 gap-y-10 mt-10">
+    <div id="one" class="col-span-1 px-5 font-bold text-xs">
+    <img id  = "fourth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/ringtail.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-11" style="color: black; user-select:none;">Ringtail</span>
     </div>
-    <div id="six" class="text-center">
-    <img id="last" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/rabbit.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Rabbit</span>
+    <div id="one" class="col-span-1 font-bold text-xs">
+    <img id = "fifth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/whiptail.png" alt="Light" draggable="false">
+        <span id="elementText" class="" style="color: black; user-select:none; margin-left: 40px;">Whiptail</span>
     </div>
+    <div id="one" class="col-span-1 font-bold text-xs">
+    <img id = "sixth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/eagle.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-12" style="color: black; user-select:none;">Eagle</span>
+    </div>
+    <div id="one" class="col-span-1 font-bold text-xs">
+    <img id = "seventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/jackrabbit.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-10" style="color: black; user-select:none;">Jackrabbit</span>
+    </div>
+    <div id="one" class="col-span-1  font-bold text-xs">
+    <img id = "eighth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/pine_marten.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-8" style="color: black; user-select:none;">Pine Marten</span>
+    </div>
+    </div>
+    <div class="grid grid-cols-6 items-center gap-x-0 mt-28">
+    <div id="one" class="col-span-1 font-bold text-xs">
+    <img id = "ninth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/rat.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-16" style="color: black; user-select:none;">Rat</span>
+    </div>
+      <div id="one" class="col-span-1 px-10 font-bold text-xs">
+    <img id = "tenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/nuthatch.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-10" style="color: black; user-select:none;">Nuthatch</span>
+    </div>
+    <div id ="one" class="col-span-1 font-bold text-xs">
+    <img id = "eleventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/frog.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-14" style="color: black; user-select:none;">Frog</span>
+    </div>
+    <div id="one" class="col-span-1 font-bold text-xs">
+    <img id = "twelvth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/butterfly.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-12" style="color: black; user-select:none;">Butterfly</span>
+    </div>
+    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    <img id = "thirteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/squirrel.png" alt="Light" draggable="false">
+        <span id="elementText" class="" style="color: black; user-select:none;">Squirrel</span>
+    </div>
+    <div id="one" class="col-span-1 font-bold text-xs">
+    <img id = "fourteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/deer.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-16" style="color: black; user-select:none;">Deer</span>
+    </div>
+    </div>
+    <div class="flex justify-center mt-40 font-bold text-xs">
+    <div id="one" class="">
+    <img id = "last" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/vegetation.png" alt="Light" draggable="false">
+        <span id="elementText" class="ml-8" style="color: black; user-select:none;"></span>
+    </div>
+    </div>
+ 
    
     </div>
    
@@ -176,7 +223,7 @@ body {
   <section class="droppable-elements">
    <div class="flex justify-end">
   <div></div>
-      <button id="next" wire:click="foodweb3()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
+      <button id="next" wire:click="foodweb4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
 </div>
   </section>
   </div>
@@ -232,15 +279,32 @@ body {
     arr.push(id);
      var first = document.getElementById(arr[0]);
      var second = document.getElementById(arr[1]);
-    // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
 
 //if right connection draw line
-if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "fourth") || (arr[0] == "fifth" && arr[1] == "last") || (arr[0] == "last" && arr[1] == "third") || (arr[0] == "last" && arr[1] == "first"))
+if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") 
+|| (arr[0] == "fourth" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "first") 
+|| (arr[0] == "fifth" && arr[1] == "second") || (arr[0] == "fifth" && arr[1] == "third") 
+|| (arr[0] == "seventh" && arr[1] == "first") || (arr[0] == "seventh" && arr[1] == "second") 
+|| (arr[0] == "seventh" && arr[1] == "third") || (arr[0] == "eighth" && arr[1] == "second") 
+|| (arr[0] == "eighth" && arr[1] == "third") || (arr[0] == "ninth" && arr[1] == "fourth") 
+|| (arr[0] == "ninth" && arr[1] == "fifth") || (arr[0] == "ninth" && arr[1] == "sixth")
+|| (arr[0] == "ninth" && arr[1] == "seventh") || (arr[0] == "ninth" && arr[1] == "eighth")
+|| (arr[0] == "tenth" && arr[1] == "fifth") || (arr[0] == "eleventh" && arr[1] == "fourth")
+|| (arr[0] == "eleventh" && arr[1] == "fifth") || (arr[0] == "eleventh" && arr[1] == "sixth")
+|| (arr[0] == "eleventh" && arr[1] == "seventh") || (arr[0] == "eleventh" && arr[1] == "eighth")
+|| (arr[0] == "twelvth" && arr[1] == "fifth") || (arr[0] == "twelvth" && arr[1] == "sixth")
+|| (arr[0] == "twelvth" && arr[1] == "seventh") || (arr[0] == "thirteenth" && arr[1] == "fourth")
+|| (arr[0] == "thirteenth" && arr[1] == "sixth") || (arr[0] == "thirteenth" && arr[1] == "seventh")
+|| (arr[0] == "thirteenth" && arr[1] == "eighth") || (arr[0] == "fourteenth" && arr[1] == "first")
+|| (arr[0] == "fourteenth" && arr[1] == "second") || (arr[0] == "last" && arr[1] == "ninth")
+|| (arr[0] == "last" && arr[1] == "tenth") || (arr[0] == "last" && arr[1] == "eleventh")
+|| (arr[0] == "last" && arr[1] == "twelvth") || (arr[0] == "last" && arr[1] == "thirteenth")
+|| (arr[0] == "last" && arr[1] == "fourteenth"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
   arr=[];
   ctr++;
-  if(ctr >= 7){
+  if(ctr >= 37){
     //console.log(playAgainBtn + " " + nextBtn + " " + textTitle);
     playAgainBtn.style.display = "block";
     nextBtn.style.display = "block";
@@ -322,11 +386,11 @@ line.show('draw', {
 
     var elements = [first, second, third, fourth, fifth, last];
     var randomElements = shuffle(elements);
-    randomElements[1].addClass('mt-16');
-    randomElements[4].addClass('mt-16');
+    //randomElements[1].addClass('mt-16');
+    //randomElements[4].addClass('mt-16');
       //var elmId = $("#test").attr("id");
   //console.log(randomElements[1].attr("class") + " " + );
-    $('.elems').append(randomElements);
+    //$('.elems').append(randomElements);
 
   });
 

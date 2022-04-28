@@ -15,7 +15,7 @@ body {
 
 #play-again-btn {
   position: absolute;
-  top: 1.5rem;
+  top: 1rem;
   left: 55%;
   margin-left: -50px;
   font-size: 1rem;
@@ -44,13 +44,11 @@ body {
 }
 
 #next{
-
   display: none;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
 }
 #next.next-entrance {
-
   opacity: 1;
   transform: translateX(2rem);
 }
@@ -58,20 +56,19 @@ body {
 .draggable-elements {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  max-height: 100vh;
+  margin-top: 2rem;
 }
 .draggable {
-  height: 6rem;
-  width: 6rem;
+  height: 8rem;
+  width: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 5rem;
   margin: 0rem 2rem;
-  cursor: pointer;
+  cursor: move;
   transition: opacity 0.2s;
-  border: none;
+  border: solid black 2px;
   padding: 4px;
 }
 .draggable:hover {
@@ -80,7 +77,7 @@ body {
 .droppable {
   height: 7rem;
   width: 7rem;
-  margin: 1rem 1rem;
+  margin: 1rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,9 +85,8 @@ body {
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  background-color: #fff;
-  border: 3px dashed #111;
-  border-radius: 50%;
+  background-color: transparent;
+  /* border: 3px dashed #111; */
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .droppable span {
@@ -125,63 +121,97 @@ body {
   opacity: 0.1;
 }
 
+#div1 {
+  width: 610px;
+  height: 350px;
+  padding: 10px;
+
+}
+#div2 {
+  width: 610px;
+  height: 350px;
+  padding: 10px;
+  /*border: 1px solid #aaaaaa;*/
+}
+
 @media (max-width: 600px) {
   html { font-size: 14px; }
   .draggable-elements { margin: 1.5rem; }
 }
 </style>
 <div >
-    <div class="p-8">
+    <div class="p-6">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another example.</h1>
-  <div class="">
-        <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
+  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Try another one</h1>
+        <button id="play-again-btn" class="bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
-  </div>
-
-    <section class="draggable-elements">
-
-    <div class="elems grid grid-cols-3 gap-x-10 gap-y-32">
-    <div id="one" class="text-center">
-    <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px;">Fox</span>
-    </div>
-    <div id="two" class="text-center">
-    <img id="second" class="draggable bg-white" style="color: #fff; background-color: transparent; " src="/storage/images/bird.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 110px">Bird</span>
-    </div>
-     <div id="three" class="text-center">
-    <img id="third" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 150px" src="/storage/images/cat.png" alt="Grass" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Cat</span>
-    </div>
-    <div id="four" class="text-center">
-    <img id="fourth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/slug.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Slug</span>
-    </div>
-    <div id="five" class="text-center">
-    <img id="fifth" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/grass.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Grass</span>
-    </div>
-    <div id="six" class="text-center">
-    <img id="last" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/rabbit.png" alt="Consumers" draggable="false">
-        <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Rabbit</span>
-    </div>
-   
-    </div>
-   
-  </section>
-
-
-
+  
   <section class="droppable-elements">
-   <div class="flex justify-end">
-  <div></div>
-      <button id="next" wire:click="foodweb3()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
-</div>
+    <div class="grid grid-cols-2">
+    <div class="col-span-1 border border-black text-center font-bold p-2">Competition
+    </div>
+    <div class="col-span-1 border border-black text-center font-bold p-2">Predation
+    </div>
+    <div id="" class="col-span-1 border border-black p-5 h-96">
+    <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    </div>
+    <div id="" class="col-span-1 border border-black p-5 h-96">
+    <div id="div2" class="grid grid-cols-3" ondrop="drop2(event)" ondragover="allowDrop2(event)">
+    </div>
+    </div>
+    </div>
+
+
+   {{-- <div class="flex justify-center">
+    <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div id="div2" class="grid grid-cols-3" ondrop="drop2(event)" ondragover="allowDrop2(event)">
+    </div> --}}
+    
+    </div>
+    {{-- <div class="flex justify-center">
+
+    <div class="grid grid-cols-2" id="">
+    <div class="col-span-1 border border-black p-4 text-center font-bold">Competition</div>
+    <div class="col-span-1 border border-black p-4 text-center font-bold">Predation</div>
+    
+    <div class="border border-black p-10">
+    <div class="droppable col-span-1" data-draggable-id="competition">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Fighting Over Teritory</span>
+    </div>
+    </div>
+
+    <div class="border border-black p-10">  
+    <div class="droppable col-span-1" data-draggable-id="predation">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Fighting Over Food</span>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+</div> --}}
+ 
   </section>
-  </div>
+  
+  <section class="draggable-elements px-20">
+  <div class="flex px-10">
+  <img id="drag1" src="/storage/images/seals.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+  <img id="drag2" src="/storage/images/birds.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+  <img id="drag3" src="/storage/images/deers.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+  <img id="drag1" src="/storage/images/tigers.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+  <img id="drag2" src="/storage/images/bears.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+  <img id="drag3" src="/storage/images/wolfs.png" draggable="true" ondragstart="drag(event)" width="150" height="150">
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/lion.png" alt="Lion" draggable="true"id="lion"> --}}
+    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/competition.png" alt="Goat" draggable="true" id="competition">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/predation.png" alt="Plant" draggable="true" id="predation"> --}}
+    </div>
+  </section>
 
-
+<div class="mt-0 flex justify-between">
+<div></div>
+<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -200,6 +230,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s; --}}
 </div>
+<div class="loader"></div>
 </div>
 
 
@@ -211,123 +242,30 @@ body {
 <script>
 
   $(window).on('load', function() {
-    var arr = [];
-    var ctr = 0;
-    const playAgainBtn = document.querySelector("#play-again-btn");
-    const nextBtn = document.querySelector("#next");
-    const textTitle = document.querySelector('#textTitle');
-    $('.elems').click(function(event) {
-      //if event is null
-      event.preventDefault();
-  //get id
-  var id = event.target.id;
-  
- 
-  if(arr.length != 1)
-  {
-    arr.push(id);
-  }
-  else
-  {
-    arr.push(id);
-     var first = document.getElementById(arr[0]);
-     var second = document.getElementById(arr[1]);
-    // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
-
-//if right connection draw line
-if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "fourth") || (arr[0] == "fifth" && arr[1] == "last") || (arr[0] == "last" && arr[1] == "third") || (arr[0] == "last" && arr[1] == "first"))
-{
-  var line = new LeaderLine(first, second, {hide: true, dash: true});
-  arr=[];
-  ctr++;
-  if(ctr >= 7){
-    //console.log(playAgainBtn + " " + nextBtn + " " + textTitle);
-    playAgainBtn.style.display = "block";
-    nextBtn.style.display = "block";
-    textTitle.innerText = "Good Job! This is the correct order.";
-    setTimeout(() => {
-      //playAudio(correctAudio);
-      playAgainBtn.classList.add("play-again-btn-entrance");
-      next.classList.add("next-entrance");
-       anime({
-            targets: [document.getElementById('one'), document.getElementById('two'), document.getElementById('three'), document.getElementById('four')],
-            scale: .99,
-            duration: 1000,
-            });
-    }, 50);
-  }
-line.show('draw', {
-  startPlug: 'behind',
-  endPlug: 'behind',
-  animOptions: {
-    duration: 3000,
-    timing: [0.5, 0, 1, 0.42],
-  }
-})
- 
-}else{
-  const xMax = 16;
-    const audio = new Audio("/storage/audio/Quack.mp3" );
-    playAudio(audio);
-    //animate shake effect on wrong drop
-    anime({
-      targets: [first, second],
-    easing: 'easeInOutSine',
-    duration: 400,
-    borderColor: [
-      {
-        value: '#ff0000',
-      },
-      {
-        value: '#ff0000',
-      },
-      {
-        value: '#000000',
-      }
-    ],
-    translateX: [
-      {
-      value: xMax * -1,
-    },
-    {
-      value: xMax,
-    },
-    {
-      value: xMax/-2,
-    },
-    {
-      value: xMax/2,
-    },
-    {
-      value: 0
-    }
-    ], // All properties except 'scale' inherit 250ms delay
-      });
-    arr=[];
-}
-
-
-  }
-});
-
-
-
-    var first = $('#one');
-    var second = $('#two');
-    var third = $('#three');
-    var fourth = $('#four');
-    var fifth = $('#five');
-    var last = $('#six');
-   
-
-    var elements = [first, second, third, fourth, fifth, last];
+    //set id sun to a variable
+    //var sun = $('#sun');
+    var lion = $('#lion');
+    var goat = $('#goat');
+    var plant = $('#plant');
+    //var eagle = $('#eagle');
+    //randomize the order of the elements
+    var elements = [lion,goat,plant];
     var randomElements = shuffle(elements);
-    randomElements[1].addClass('mt-16');
-    randomElements[4].addClass('mt-16');
-      //var elmId = $("#test").attr("id");
-  //console.log(randomElements[1].attr("class") + " " + );
-    $('.elems').append(randomElements);
+    //set the order of the elements
+    //console.log(randomElements);
+    //APPEND FLEX ELEMENTS TO THE DOm
+    $('.draggable-elements').append(randomElements);
+    
+    //sun.remove().insertAfter()
+    //set random number between 0 and 5
+    // var randomNumber = Math.floor(Math.random() * 6);
+    // if(randomNumber == 0)
+    // {
 
+    // }
+   // $('#sun').remove().insertAfter($('#grass'));
+  // } else {
+  //   $('.kutija1').remove().insertBefore($('.kutija2'));
   });
 
   function shuffle(array) {
@@ -383,7 +321,44 @@ anime({
 });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/leader-line"></script>
+{{-- code code code --}}
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function allowDrop2(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  
+  var data = ev.dataTransfer.getData("text");
+  var divId = ev.target.id;
+  console.log(data + " " + ev.target.id);
+    if(data === "drag1"){
+        ev.target.appendChild(document.getElementById(data));
+    }else{
+        alert("You can't drop here");
+    }
+    
+}
+
+function drop2(ev) {
+  ev.preventDefault();
+  
+  var data = ev.dataTransfer.getData("text");
+  var divId = ev.target.id;
+  console.log(data + " " + ev.target.id);
+    
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
 
 
 
@@ -393,7 +368,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 6;
+const totalDraggableItems = 2;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -457,7 +432,7 @@ function playAgainBtnClick() {
 
 
 
-function drop(event) {
+function drops(event) {
   event.preventDefault(); // This is in order to prevent the browser default handling of the data
   event.target.classList.remove("droppable-hover");
   const draggableElementData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
@@ -477,7 +452,7 @@ function drop(event) {
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     event.target.style.backgroundColor = "transparent";
     //set color of inner element
-    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold; visibility: visible;">`+event.target.innerText+`</span>`;
+    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold">`+event.target.innerText+`</span>`;
     //event.target.innerText.color = "black";
     //window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
@@ -488,14 +463,14 @@ function drop(event) {
     //draggableText.classList.remove("hidden");
     playAgainBtn.style.display = "block";
     nextBtn.style.display = "block";
-    textTitle.innerText = "Good Job! This is the correct order.";
+    textTitle.innerText = "Good Job! You got the right answer.";
     setTimeout(() => {
       playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({
-            targets: droppableElements,
-            scale: 0.95,
+            targets: [droppableElements,arrowElements],
+            scale: 1.25,
             duration: 1000,
             });
     }, 50);
@@ -547,7 +522,5 @@ function playAudio(audio) {
  audio.play();
 }
   </script>
-      <script src=""></script>
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     </div>

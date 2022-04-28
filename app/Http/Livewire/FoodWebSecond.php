@@ -8,6 +8,11 @@ class FoodWebSecond extends Component
 {
     public function render()
     {
-        return view('livewire.food-web-second');
+        return view('livewire.food-web-second')->layout('layouts.app');
+    }
+
+    public function foodweb3()
+    {
+        return redirect()->route('foodweb3');
     }
 }
