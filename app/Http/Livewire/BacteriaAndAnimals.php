@@ -12,6 +12,7 @@ class BacteriaAndAnimals extends Component
     }
 
     public function next(){
+        //redirect
         return redirect()->route('main');
     }
 }
