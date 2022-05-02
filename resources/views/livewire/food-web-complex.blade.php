@@ -144,7 +144,7 @@ body {
     <section class="draggable-elements">
 
     <div class="elems grid grid-cols-6 gap-x-2 gap-y-10 items-center">
-    <div id="one" class="col-span-1 text-center px-10 font-bold text-xs">
+    <div class="col-span-1 text-center px-10 font-bold text-xs">
     {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
         <span id="elementText" class="" style="color: black; user-select:none;">Tertiary Consumers :</span>
     </div>
@@ -152,79 +152,79 @@ body {
     <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/osprey.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Osprey</span>
     </div>
-    <div id="one" class="col-span-2">
+    <div id="two" class="col-span-2">
     <img id = "second" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/bald_eagle.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Bald Eagle</span>
     </div>
-    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    <div class="col-span-1 text-center px-5 font-bold text-xs">
     {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
         <span id="elementText" class="" style="color: black; user-select:none;">Secondary Consumers :</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="three" class="col-span-1">
     <img id = "third" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/seagull.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Gulls and Terns</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="four" class="col-span-1">
     <img id = "fourth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/wading_bird.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Wading Birds</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="five" class="col-span-1">
     <img id = "fifth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/large_fish.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 5px;">Large Piscivorous Fish</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="six" class="col-span-1">
     <img id = "sixth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/sea_duck.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Sea Ducks</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="seven" class="col-span-1">
     <img id = "seventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/swan.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 20px;">Tundra Swan</span>
     </div>
-      <div id="one" class="col-span-1 text-center px-10 font-bold text-xs">
+      <div class="col-span-1 text-center px-10 font-bold text-xs">
     {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
         <span id="elementText" class="" style="color: black; user-select:none;">Primary Consumers :</span>
     </div>
-    <div id ="one" class="col-start-3 col-end-5 col-span-3">
+    <div id ="eight" class="col-start-3 col-end-5 col-span-3">
     <img id = "eighth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/small_fish.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 0px;">Small Planktivorous Fish</span>
     </div>
-    <div id="one" class="col-span-2">
+    <div id="nine" class="col-span-2">
     <img id = "ninth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/bivalves.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 40px;">Bivalves</span>
     </div>
-    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    <div class="col-span-1 text-center px-5 font-bold text-xs">
     {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
         <span id="elementText" class="" style="color: black; user-select:none;">Herbivores :</span>
     </div>
-    <div id="one" class="col-span-2">
+    <div id="ten" class="col-span-2">
     <img id = "tenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/zooplankton.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 20px;">Zooplankton</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="eleven" class="col-span-1">
     <img id = "eleventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/benthic.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 10px;">Benthic Invertebrates</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="twelve" class="col-span-1">
     <img id = "twelvth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/herbivore_duck.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 10px;">Herbivorous Ducks</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="thirteen" class="col-span-1">
     <img id = "thirtheenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/geese.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 0px;">Geese and Mute Swans</span>
     </div>
-    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    <div class="col-span-1 text-center px-5 font-bold text-xs">
     {{-- <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fox.png" alt="Light" draggable="false"> --}}
         <span id="elementText" class="" style="color: black; user-select:none;">Primary Producers :</span>
     </div>
-    <div id="one" class="col-span-2 col-start-3 col-end-4 ">
+    <div id="fourteen" class="col-span-2 col-start-3 col-end-4 ">
     <img id = "fourteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/phyoplankton.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 20px;">Phytoplankton</span>
     </div>
-    <div id="one" class="col-span-1">
+    <div id="fifteen" class="col-span-1">
     <img id = "fiftheenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/sav.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold " style="color: black; user-select:none; margin-left: 0px;">Submerged Aquatic Vegetation (SAV)</span>
     </div>
-    <div id="one" class="col-span-2">
+    <div id="sixteen" class="col-span-2">
     <img id = "sixteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/vegetation.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-left: 30px;">Vegetation</span>
     </div>
@@ -312,10 +312,15 @@ body {
   else
   {
     arr.push(id);
-     var first = document.getElementById(arr[0]);
-     var second = document.getElementById(arr[1]);
+ 
     // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
-
+ if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1) || (jQuery.inArray("seven", arr) !== -1) || (jQuery.inArray("eight", arr) !== -1) || (jQuery.inArray("nine", arr) !== -1) || (jQuery.inArray("ten", arr) !== -1) || (jQuery.inArray("eleven", arr) !== -1) || (jQuery.inArray("twelve", arr) !== -1) || (jQuery.inArray("thirteen", arr) !== -1) || (jQuery.inArray("fourteen", arr) !== -1) || (jQuery.inArray("fifteen", arr) !== -1) || (jQuery.inArray("sixteen", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
+          var first = document.getElementById(arr[0]);
+     var second = document.getElementById(arr[1]);
 //if right connection draw line
 if((arr[0] == "fifth" && arr[1] == "first") || (arr[0] == "fifth" && arr[1] == "second") 
 || (arr[0] == "sixth" && arr[1] == "second") || (arr[0] == "eighth" && arr[1] == "third") 
@@ -396,6 +401,8 @@ line.show('draw', {
       });
     arr=[];
 }
+
+    }
 
 
   }

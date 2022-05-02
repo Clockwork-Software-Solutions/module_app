@@ -145,7 +145,7 @@ body {
     <div class="elems-left col-span-1">
     <div id="one" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
     <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Pig</span>
-    <div class="flex justify-center">
+    <div id="one_inner" class="flex justify-center">
     <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/pig.png" alt="Light" draggable="false">
     </div>
     <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Have lots of digested food in the intestine</span>
@@ -153,7 +153,7 @@ body {
 
     <div id="two" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
     <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Mistletoe</span>
-    <div class="flex justify-center">
+    <div id="two_inner" class="flex justify-center">
     <img id = "second" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/mistletoe.png" alt="Light" draggable="false">
     </div>
     <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Type of plant that sucks nutrients out of trees</span>
@@ -161,7 +161,7 @@ body {
 
     <div id="three" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
     <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Fish</span>
-    <div class="flex justify-center">
+    <div id="three_inner" class="flex justify-center">
     <img id = "third" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/fish.png" alt="Light" draggable="false">
     </div>
     <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Live in the water and have blood</span>
@@ -171,7 +171,7 @@ body {
     <div class="elems-right col-span-1">
     <div id="four" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
     <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Tapeworm</span>
-    <div class="flex justify-center">
+    <div id="four_inner" class="flex justify-center">
     <img id = "fourth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/tapeworm.png" alt="Light" draggable="false">
     </div>
     <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Need to eat food that is already digested</span>
@@ -179,7 +179,7 @@ body {
 
     <div id="five" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
     <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Oak Tree</span>
-    <div class="flex justify-center">
+    <div id="five_inner" class="flex justify-center">
     <img id = "fifth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/tree.png" alt="Light" draggable="false">
     </div>
     <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Big tree with lots of nutrients</span>
@@ -187,7 +187,7 @@ body {
 
     <div id="six" class="text-center border-2 border-solid border-black rounded-md p-4 mb-5">
     <span id="elementText" class="font-bold text-sm" style="color: black; user-select:none;">Leech</span>
-    <div class="flex justify-center">
+    <div id="six_inner" class="flex justify-center">
     <img id = "sixth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/leech.png" alt="Light" draggable="false">
     </div>
     <span id="elementText" class="text-sm bold break-words" style="color: black; user-select:none;">Live in the water and suck blood from animals that live in the water</span>
@@ -201,7 +201,7 @@ body {
 
 
   <section class="droppable-elements">
-   <div class="flex justify-end">
+   <div class="flex justify-end"> 
   <div></div>
       <button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
 </div>
@@ -239,7 +239,11 @@ body {
 
   $(window).on('load', function() {
     var arr = [];
+    var parent = [];
     var ctr = 0;
+    var parents;
+    var parent_id;
+    var id;
     const playAgainBtn = document.querySelector("#play-again-btn");
     const nextBtn = document.querySelector("#next");
     const textTitle = document.querySelector('#textTitle');
@@ -247,26 +251,46 @@ body {
       //if event is null
       event.preventDefault();
   //get id
-   var parent = event.target.parentNode;
-   // console.log();
-  var id = parent.parentNode.id;
+
+    parents = event.target.parentNode;
+    parent_id = parents.parentNode.id;
+    id = event.target.id;
+
   
+   // console.log();
+  //var id = parent.parentNode.id;
  
   if(arr.length != 1)
   {
     arr.push(id);
+    //parent.push(parent_id);
   }
   else
   {
+    
     arr.push(id);
+    //parent.push(parent_id);
+
+      
+ if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("one_inner", arr) !== -1) ||  (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("two_inner", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("three_inner", arr) !== -1) || (jQuery.inArray("four", arr) !== -1) || (jQuery.inArray("four_inner", arr) !== -1) || (jQuery.inArray("five", arr) !== -1) || (jQuery.inArray("five", arr) !== -1)|| (jQuery.inArray("five_inner", arr) !== -1) || (jQuery.inArray("six", arr) !== -1)|| (jQuery.inArray("six_inner", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
+//if right connection draw line
+
      var first = document.getElementById(arr[0]);
      var second = document.getElementById(arr[1]);
-      
-
-//if right connection draw line
-if((arr[0] == "one" && arr[1] == "four") || (arr[0] == "two" && arr[1] == "five") || (arr[0] == "three" && arr[1] == "six"))
+     //get parent id
+      var first_parent = first.parentNode;
+      var second_parent = second.parentNode;
+      var first_grand_parent = first_parent.parentNode;
+      var second_grand_parent = second_parent.parentNode;
+   
+if((arr[0] == "first" && arr[1] == "fourth") || (arr[0] == "second" && arr[1] == "fifth") || (arr[0] == "third" && arr[1] == "sixth"))
 {
-  var line = new LeaderLine(first, second, {hide: true, dash: true});
+  console.log(parent);
+  var line = new LeaderLine(first_grand_parent, second_grand_parent, {hide: true, dash: true});
   arr=[];
   ctr++;
   if(ctr >= 3){
@@ -340,7 +364,7 @@ line.show('draw', {
     arr=[];
 }
 
-
+    }
   }
 });
 

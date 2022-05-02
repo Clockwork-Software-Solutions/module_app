@@ -222,11 +222,17 @@ body {
   else
   {
     arr.push(id);
-     var first = document.getElementById(arr[0]);
-     var second = document.getElementById(arr[1]);
+
       
 
 //if right connection draw line
+ if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
+    var first = document.getElementById(arr[0]);
+     var second = document.getElementById(arr[1]);
 if((arr[0] == "third" && arr[1] == "second") || (arr[0] == "third" && arr[1] == "first") || (arr[0] == "first" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "last") || (arr[0] == "first" && arr[1] == "last"))
 //if((arr[0] == "three" && arr[1] == "two") || (arr[0] == "three" && arr[1] == "one") || (arr[0] == "one" && arr[1] == "two") || (arr[0] == "two" && arr[1] == "last") || (arr[0] == "one" && arr[1] == "last"))
 {
@@ -298,6 +304,7 @@ line.show('draw', {
       });
     arr=[];
 }
+    }
 
 
   }

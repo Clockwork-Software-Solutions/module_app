@@ -141,23 +141,23 @@ body {
     <section class="draggable-element flex justify-center mt-10">
     
     <div class="elems flex h-10">
-    <div id="" class="text-center">
+    <div id="one" class="text-center">
     <img id = "first" class="draggable bg-white" style="color: #fff; margin-top:220px; background-color: transparent; margin-right: 100px" src="/storage/images/grass.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 80px">Grass</span>
     </div>
-    <div class="text-center">
+    <div id="two" class="text-center">
     <img id="second" class="draggable bg-white" style="color: #fff; margin-top:120px; background-color: transparent; margin-right: 150px" src="/storage/images/grasshopper.png" alt="Grass" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Grasshopper</span>
     </div>
-     <div class="text-center">
+     <div id="three" class="text-center">
     <img id="third" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 150px" src="/storage/images/frog.png" alt="Grass" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Frog</span>
     </div>
-    <div  class="text-center">
+    <div id="four" class="text-center">
     <img id="fourth" class="draggable bg-white" style="color: #fff; margin-top:120px; background-color: transparent; margin-right: 100px" src="/storage/images/snake.png" alt="Consumers" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 70px">Snake</span>
     </div>
-    <div id="" class="text-center">
+    <div id="five" class="text-center">
     <img id="last" class="draggable bg-white" style="color: #fff; margin-top:220px; background-color: transparent;" src="/storage/images/hawk.png" alt="Lion" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Hawk</span>
     </div>
@@ -227,10 +227,15 @@ body {
   else
   {
     arr.push(id);
-     var first = document.getElementById(arr[0]);
-     var second = document.getElementById(arr[1]);
-      
 
+      
+ if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1) || (jQuery.inArray("five", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
+    var first = document.getElementById(arr[0]);
+     var second = document.getElementById(arr[1]);
 //if right connection draw line
 if((arr[0] == "first" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "third" && arr[1] == "fourth") || (arr[0] == "fourth" && arr[1] == "last"))
 {
@@ -301,6 +306,7 @@ line.show('draw', {
       });
     arr=[];
 }
+    }
 
 
   }

@@ -141,19 +141,19 @@ body {
     <section class="draggable-element flex justify-center mt-10">
     
     <div class="elems flex h-10">
-    <div id="" class="text-center">
+    <div id="one" class="text-center">
     <img id = "first" class="draggable bg-white" style="color: #fff; margin-top:120px; background-color: transparent; margin-right: 100px" src="/storage/images/algae.png" alt="Light" draggable="false"id="1">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 80px">Algae</span>
     </div>
-    <div class="text-center">
+    <div id="two" class="text-center">
     <img id="second" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 150px" src="/storage/images/fish.png" alt="Grass" draggable="false" id="2">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 120px">Fish</span>
     </div>
-    <div  class="text-center">
+    <div id="three" class="text-center">
     <img id="third" class="draggable bg-white" style="color: #fff; background-color: transparent; margin-right: 100px" src="/storage/images/seal.png" alt="Consumers" draggable="false" id="3">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 70px">Seal</span>
     </div>
-    <div id="" class="text-center">
+    <div id="four" class="text-center">
     <img id="last" class="draggable bg-white" style="color: #fff; margin-top:120px; background-color: transparent;" src="/storage/images/shark.png" alt="Lion" draggable="false"id="4">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Shark</span>
     </div>
@@ -206,6 +206,7 @@ body {
 
 <script>
 
+
   $(window).on('load', function() {
     var arr = [];
     var ctr = 0;
@@ -225,19 +226,24 @@ body {
   }
   else
   {
-    arr.push(id);
+    arr.push(id); 
+    //get id of target parent
+    //var parentId = event.target.parentNode.id;
+
+    if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
      var first = document.getElementById(arr[0]);
      var second = document.getElementById(arr[1]);
-      
-
-//if right connection draw line
-if((arr[0] == "first" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "third" && arr[1] == "last"))
-{
+     if((arr[0] == "first" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "third" && arr[1] == "last"))
+    {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
   arr=[];
   ctr++;
   if(ctr >= 3){
-    console.log(playAgainBtn + " " + nextBtn + " " + textTitle);
+
     playAgainBtn.style.display = "block";
     nextBtn.style.display = "block";
     textTitle.innerText = "Good Job! This is the correct order.";
@@ -300,6 +306,12 @@ line.show('draw', {
       });
     arr=[];
 }
+    // console.log(first.id + " " + second.id);
+    }
+    
+
+
+
 
 
   }

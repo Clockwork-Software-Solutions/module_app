@@ -230,11 +230,17 @@ body {
   else
   {
     arr.push(id);
-     var first = document.getElementById(arr[0]);
-     var second = document.getElementById(arr[1]);
+
     // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
 
 //if right connection draw line
+ if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
+    var first = document.getElementById(arr[0]);
+     var second = document.getElementById(arr[1]);
 if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] == "second") || (arr[0] == "second" && arr[1] == "third") || (arr[0] == "fifth" && arr[1] == "fourth") || (arr[0] == "fifth" && arr[1] == "last") || (arr[0] == "last" && arr[1] == "third") || (arr[0] == "last" && arr[1] == "first"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
@@ -305,6 +311,7 @@ line.show('draw', {
       });
     arr=[];
 }
+    }
 
 
   }
