@@ -149,9 +149,9 @@ body {
   
   <section class="droppable-elements">
     <div class="grid grid-cols-2">
-    <div class="col-span-1 border border-black text-center font-bold p-2"><span id="title">Bacteria</span>
+    <div class="col-span-1 border border-black text-center font-bold p-2"><span id="title">Animals</span>
     </div>
-    <div class="col-span-1 border border-black text-center font-bold p-2">Animals
+    <div class="col-span-1 border border-black text-center font-bold p-2">Bacteria
     </div>
     <div id="" class="col-span-1 border border-black p-5 h-96">
     <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
