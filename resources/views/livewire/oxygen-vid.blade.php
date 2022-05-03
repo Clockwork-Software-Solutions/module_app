@@ -4,18 +4,22 @@
   <h1 id="textTitle" class="text-3xl mb-10 mx-14">Oxygen And Carbon-Dioxide Cycle</h1>
   </div>
 <div class="flex justify-center">
-<video id="video" class="col-span-1" width="600" height="600" controls>
-  <source src="/storage/videos/food_chain.mp4" type="video/mp4">
+{{-- <iframe id="video" width="585" height="400"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe> --}}
+<iframe width="585" height="400" src="https://www.youtube.com/embed/7pZ2jxqbazk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{-- <video id="video" class="col-span-1" width="600" height="600" controls>
+  <source src="/storage/videos/oxygen.mp4" type="video/mp4"> --}}
   {{-- <iframe class="" src="/storage/videos/nemo.mp4" type="video/mp4"></iframe> --}}
   {{-- <source src="movie.ogg" type="video/ogg"> --}}
-  Your browser does not support the video tag.
-</video>
+  {{-- Your browser does not support the video tag.
+</video> --}}
 
 
 </div>
 <div class="flex justify-between mt-5 mx-60">
-<button id="play" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 ml-16 hover:bg-green-700">Play Video</button>
-<button  wire:click="proceed()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-16 hover:bg-green-700">Next</button>
+{{-- <button id="play" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 ml-16 hover:bg-green-700">Play Video</button> --}}
+<button  wire:click="proceed()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 ml-16 hover:bg-green-700">Next</button>
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
