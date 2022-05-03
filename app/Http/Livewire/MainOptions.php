@@ -13,16 +13,16 @@ class MainOptions extends Component
     }
 
     public function topic1(){
-        return redirect()->route('foodchain');
+        return redirect()->route('foodchain_vid');
     }
 
     public function topic2(){
-        return redirect()->route('symbiosis');
+        return redirect()->route('symbiosis_vid');
     }
 
     
     public function topic3(){
-        return redirect()->route('biotic');
+        return redirect()->route('biotic_vid');
     }
 
     public function topic4(){
@@ -34,6 +34,6 @@ class MainOptions extends Component
     }
 
     public function topic6(){
-        return redirect()->route('oxygen');
+        return redirect()->route('oxygen_vid');
     }
 }

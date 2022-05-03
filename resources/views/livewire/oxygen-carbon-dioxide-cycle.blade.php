@@ -139,66 +139,108 @@ body {
 
     <div class="col-span-1 grid content-end">
     <div class="images grid grid-cols-2 gap-2">
-    <img class="h-20 w-20" src="/storage/images/sav.png" alt="Grass" draggable="true"id="sun">
-    <img class="h-20 w-20" src="/storage/images/sav.png" alt="Grass" draggable="true"id="sun">
-    </div>
-    </div>
-
-    <div class="col-span-1 grid gap-5 my-20">
-    <div class="droppable transform" data-draggable-id="oxygen" id="air">
-    <span id="elementText" class="invisible" style="color: white; user-select:none;">Oxygen</span>
-    </div>
-    <div class="droppable transform" data-draggable-id="glucose" id="sugar">
-    <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
+    <img class="h-20 w-20" src="/storage/images/plant.png" alt="Grass" draggable="true" id="plant">
+    <img class="h-20 w-20" src="/storage/images/sav.png" alt="Grass" draggable="true" id="sav">
     </div>
     </div>
 
     <div class="col-span-1 grid gap-10 my-20">
-    {{-- <div class="droppable" data-draggable-id="oxygen" id="air">
+    <div class="droppable transform" data-draggable-id="one" id="first">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Oxygen</span>
     </div>
-    <div class="droppable" data-draggable-id="glucose" id="sugar">
+    <div class="droppable transform" data-draggable-id="two" id="second">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
-    </div> --}}
+    </div>
     </div>
 
-    <div class="col-span-1 grid gap-10 my-20">
+    {{-- <div class="col-span-1 grid gap-10 my-20">
     <div class="droppable" data-draggable-id="oxygen" id="air">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Oxygen</span>
     </div>
     <div class="droppable" data-draggable-id="glucose" id="sugar">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
     </div>
+    </div> --}}
+
+    <div class="col-span-1 grid gap-10 my-20">
+    <div class="droppable" data-draggable-id="three" id="third">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Oxygen</span>
+    </div>
+    <div class="droppable" data-draggable-id="four" id="fourth">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
+    </div>
     </div>
 
     <div class="col-span-1 grid content-end">
     <div class="images grid grid-cols-2 gap-2">
-    <img class="h-20 w-20" src="/storage/images/ringtail.png" alt="Grass" draggable="true"id="sun">
-    <img class="h-20 w-20" src="/storage/images/rat.png" alt="Grass" draggable="true"id="sun">
+    <img class="h-20 w-20" src="/storage/images/ringtail.png" alt="Grass" draggable="false"id="ringtail">
+    <img class="h-20 w-20" src="/storage/images/rat.png" alt="Grass" draggable="false"id="rat">
     </div>
     </div>
 
     <div class="col-span-1 grid content-end">
-    <div class="images grid grid-cols-2 gap-2">
-    <img class="h-72 w-20" src="/storage/images/tree2.png" alt="Grass" draggable="true"id="sun">
+    <div class="images grid grid-cols-3 gap-2">
+
+    <div class="col-span-1">
+    <img class="h-72 w-80" src="/storage/images/tall_tree.png" alt="Grass" draggable="false" id="tall_tree">
+    </div>
+
+    <div class="col-span-1 grid content-end">
+    <img class="h-10 w-10" src="/storage/images/fungus.png" alt="Grass" draggable="false" id="fungus">
+    </div>
+
+    <div class="col-span-1 grid content-center">
+    <div class="droppable" data-draggable-id="five" id="fifth">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
+    </div>
+    </div>
+
     </div>
     </div>
     
     
     
+    </div>
+
+    <div class="grid grid-cols-3 pt-5 border-t-2 border-black">
+    
+    <div class="col-span-1 grid content-end mt-10">
+    <div class="images">
+    <img class="h-20 w-20" src="/storage/images/vegetation.png" alt="Grass" draggable="false" id="vegetation">
+    </div>
+    </div>
+
+    <div class="col-span-1">
+    <div class="droppable" data-draggable-id="six" id="sixth">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
+    </div>
+     <div class="droppable" data-draggable-id="seven" id="seventh">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Glucose</span>
+    </div>
+    </div>
+
+     <div class="col-span-1 grid content-end mx-auto">
+    <div class="images">
+    <img class="h-20 w-20" src="/storage/images/fish.png" alt="Grass" draggable="false" id="fish">
+    </div>
+    </div>
+
     </div>
  
   </section>
   {{--<section class="draggable-element px-20">
   {{-- <div clas="w-96 h-36 bg-red-300">ss</div> 
   </section>--}}
-  <section class="draggable-elements px-20 flex">
+  <section class="draggable-elements px-20 flex-wrap space-y-5">
   <!-- <div class="px-20 flex"> -->
-    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="sunlight"><span class="" style="font-size: 13px; text-transform: uppercase;">Sunlight</span></div>
-    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="carbon_dioxide"><span class="" style="font-size: 13px; text-transform: uppercase;">Carbon Dioxide</span></div>
-    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="water"><span class="" style="font-size: 13px; text-transform: uppercase;">Water</span></div>
-    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="oxygen"><span class="" style="font-size: 13px; text-transform: uppercase;">Oxygen</span></div>
-    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="glucose"><span class="" style="font-size: 13px; text-transform: uppercase;">Glucose</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="one"><span class="text-center" style="font-size: 13px; text-transform: uppercase;">Carbon Dioxide used by plants</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="two"><span class="text-center" style="font-size: 10px; text-transform: uppercase;">Oxygen from photosynthesis available to animals</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="three"><span class="text-center" style="font-size: 13px; text-transform: uppercase;">Carbon Dioxide given off by animals</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="four"><span class="text-center" style="font-size: 13px; text-transform: uppercase;">Oxygen given off by plants</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="five"><span class="text-center" style="font-size: 9px; text-transform: uppercase;">Carbon Dioxide given off by animals decaying organic matter</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="six"><span class="text-center" style="font-size: 13px; text-transform: uppercase;">Oxygen used by animals</span></div>
+    <div draggable="true" class="draggable bg-blue-400 border border-blue-600 rounded-md" id="seven"><span class="text-center" style="font-size: 11px; text-transform: uppercase;">CO2 from respiration available to animals</span></div>
+
   </section>
   
 
@@ -237,14 +279,16 @@ body {
 <script>
 
   $(window).on('load', function() {
-
+    loadLines();
     //set id sun to a variable
-    var sunlight = $('#sunlight');
-    var carbon_dioxide = $('#carbon_dioxide');
-    var water = $('#water');
-    var oxygen = $('#oxygen');
-    var glucose = $('#glucose');
-    var elements = [sunlight, carbon_dioxide, water, oxygen, glucose];
+    var first = $('#one');
+    var second = $('#two');
+    var third = $('#three');
+    var fourth = $('#four');
+    var fifth = $('#five');
+    var sixth = $('#six');
+    var seventh = $('#seven');
+    var elements = [first, second, third, fourth, fifth, sixth, seventh];
     var randomElements = shuffle(elements);
 
     $('.draggable-elements').append(randomElements);
@@ -346,7 +390,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 5;
+const totalDraggableItems = 7;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -408,7 +452,135 @@ function playAgainBtnClick() {
 }
 
 
+function loadLines(){
+  const first = document.querySelector('#first');
+  const second = document.querySelector('#second');
+  const third = document.querySelector('#third');
+  const fourth = document.querySelector('#fourth');
+  const fifth = document.querySelector('#fifth');
+  const sixth = document.querySelector('#sixth');
+  const seventh = document.querySelector('#seventh');
+  const plant = document.querySelector('#plant');
+  const sav = document.querySelector('#sav');
+  const ringtail = document.querySelector('#ringtail');
+  const rat = document.querySelector('#rat');
+  const tall_tree = document.querySelector('#tall_tree');
+  const fungus = document.querySelector('#fungus');
+  const vegetation = document.querySelector('#vegetation');
+  const fish = document.querySelector('#fish');
 
+    var line1 = new LeaderLine(first, plant, {hide: true, dash: false});
+        line1.setOptions({startSocket: 'left', endSocket: 'top', path: 'grid'});
+        line1.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });
+
+    var line2 = new LeaderLine(rat, third, {hide: true, dash: false});
+        line2.setOptions({startSocket: 'top', endSocket: 'right', path: 'grid'});
+        line2.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });
+
+     var line3 = new LeaderLine(sav, second, {hide: true, dash: false});
+        line3.setOptions({startSocket: 'top', endSocket: 'left', path: 'grid'});
+        line3.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });
+
+    var line4 = new LeaderLine(fourth, ringtail, {hide: true, dash: false});
+        line4.setOptions({startSocket: 'right', endSocket: 'top', path: 'grid'});
+        line4.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        }); 
+
+     var line5 = new LeaderLine(fungus, tall_tree, {hide: true, dash: false});
+        line5.setOptions({startSocket: 'top', endSocket: 'top', path: 'grid'});
+        line5.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });
+
+     
+     var line6 = new LeaderLine(seventh, vegetation, {hide: true, dash: false});
+        line6.setOptions({startSocket: 'left', endSocket: 'right', path: 'grid'});
+        line6.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });
+
+
+      var line7 = new LeaderLine(fish, seventh, {hide: true, dash: false});
+        line7.setOptions({startSocket: 'left', endSocket: 'right', path: 'grid'});
+        line7.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });
+
+         var line8 = new LeaderLine(sixth, fish, {hide: true, dash: false});
+        line8.setOptions({startSocket: 'right', endSocket: 'top', path: 'grid'});
+        line8.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        }); 
+
+        var line9 = new LeaderLine(vegetation, sixth, {hide: true, dash: false});
+        line9.setOptions({startSocket: 'top', endSocket: 'left', path: 'grid'});
+        line9.show('draw', {
+        
+        startPlug: 'behind',
+        endPlug: 'behind',
+        animOptions: {
+        duration: 3000,
+        timing: [0.5, 0, 1, 0.42],
+        }
+        });                                         
+
+
+}
 
 function drop(event) {
   event.preventDefault(); // This is in order to prevent the browser default handling of the data
@@ -440,79 +612,9 @@ function drop(event) {
     
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 3rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 10px 10px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
+    event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 3.5rem; margin-top: 0rem; border-radius: 6px; border-width: 2px; color:black; font-size: 10px; text-transform: uppercase; padding: 10px 10px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
     correct++;
-    //draw leader line
-    if(draggableElementData == "sunlight")
-    {
-
-        var line = new LeaderLine(droppedElemSun, sunflower, {hide: true, dash: false});
-        line.setOptions({startSocket: 'right', endSocket: 'top', path: 'arc'});
-        line.show('draw', {
-        
-        startPlug: 'behind',
-        endPlug: 'behind',
-        animOptions: {
-        duration: 3000,
-        timing: [0.5, 0, 1, 0.42],
-        }
-        });
-    }
-    else if(draggableElementData == "carbon_dioxide")
-    {
-        var line = new LeaderLine(droppedElemCarbon, sunflower, {hide: true, dash: false});
-        line.setOptions({startSocket: 'right', endSocket: 'left', path: 'straight'});
-        line.show('draw', {
-        startPlug: 'behind',
-        endPlug: 'behind',
-        animOptions: {
-        duration: 3000,
-        timing: [0.5, 0, 1, 0.42],
-        }
-        });
-    }
-    else if(draggableElementData == "water")
-    {
-        var line = new LeaderLine(droppedElemWater, sunflower, {hide: true, dash: false});
-        line.setOptions({startSocket: 'right', endSocket: 'bottom', path: 'straight'});
-        line.show('draw', {
-        startPlug: 'behind',
-        endPlug: 'behind',
-        animOptions: {
-        duration: 3000,
-        timing: [0.5, 0, 1, 0.42],
-        }
-        });
-        
-    }
-    else if(draggableElementData == "oxygen")
-    {
-        var line = new LeaderLine(sunflower, droppedElemOXygen, {hide: true, dash: false});
-        line.setOptions({startSocket: 'right', endSocket: 'left', path: 'straight'});
-        line.show('draw', {
-        startPlug: 'behind',
-        endPlug: 'behind',
-        animOptions: {
-        duration: 3000,
-        timing: [0.5, 0, 1, 0.42],
-        }
-        });
-        
-    }
-    else if(draggableElementData == "glucose")
-    {
-        var line = new LeaderLine(sunflower, droppedElemGlucose, {hide: true, dash: false});
-        line.setOptions({startSocket: 'right', endSocket: 'left', path: 'straight'});
-        line.show('draw', {
-        startPlug: 'behind',
-        endPlug: 'behind',
-        animOptions: {
-        duration: 3000,
-        timing: [0.5, 0, 1, 0.42],
-        }
-        });
-        
-    }
+   
 
 
 
@@ -524,11 +626,11 @@ function drop(event) {
       playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
-       anime({
-            targets: [images],
-            scale: 1.25,
-            duration: 1000,
-            });
+       //anime({
+       //     targets: [images],
+        //    scale: 1.25,
+        //    duration: 1000,
+         //   });
     }, 50);
   } 
   }else{

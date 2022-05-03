@@ -139,19 +139,19 @@ body {
 
     <div class="col-span-1 items-center">
     <div class="images flex justify-center">
-    <img class="h-20 w-20" src="/storage/images/sun.png" alt="Grass" draggable="true"id="sun">
+    <img class="h-20 w-20" src="/storage/images/sun.png" alt="Grass" draggable="false" id="sun">
     </div>
     <div class="droppable" data-draggable-id="sunlight" id="light">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Sunlight</span>
     </div>
     <div class="images flex justify-center">
-    <img class="h-20 w-20" src="/storage/images/carbon-dioxide.png" alt="Grass" draggable="true"id="sun">
+    <img class="h-20 w-20" src="/storage/images/carbon-dioxide.png" alt="Grass" draggable="false" id="sun">
     </div>
     <div class="droppable" data-draggable-id="carbon_dioxide" id="carbon">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Carbon Dioxide</span>
     </div>
     <div class="images flex justify-center">
-    <img class="h-20 w-20" src="/storage/images/water-droplets.png" alt="Grass" draggable="true"id="sun">
+    <img class="h-20 w-20" src="/storage/images/water-droplets.png" alt="Grass" draggable="false" id="sun">
     </div>
     <div class="droppable" data-draggable-id="water" id="waters">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Water</span>
@@ -161,13 +161,13 @@ body {
 
     <div class="col-span-1 my-auto">
     <div class="flex justify-center align">
-    <img class="h-72 w-26" src="/storage/images/sunflower2.png" alt="Grass" draggable="true"id="sunflower">
+    <img class="h-72 w-26" src="/storage/images/sunflower2.png" alt="Grass" draggable="false" id="sunflower">
     </div>
     </div>
 
     <div class="col-span-1">
     <div class="images flex justify-center align">
-    <img class="h-20 w-20" src="/storage/images/oxygen.png" alt="Grass" draggable="true"id="sun">
+    <img class="h-20 w-20" src="/storage/images/oxygen.png" alt="Grass" draggable="false" id="sun">
     </div>
     <div class="droppable" data-draggable-id="oxygen" id="air">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Oxygen</span>
