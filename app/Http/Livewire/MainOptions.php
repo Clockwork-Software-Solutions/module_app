@@ -28,4 +28,12 @@ class MainOptions extends Component
     public function topic4(){
         return redirect()->route('bacteria');
     }
+
+    public function topic5(){
+        return redirect()->route('respiration');
+    }
+
+    public function topic6(){
+        return redirect()->route('oxygen');
+    }
 }
