@@ -334,6 +334,8 @@ if((arr[0] == "fifth" && arr[1] == "first") || (arr[0] == "fifth" && arr[1] == "
 || (arr[0] == "sixteenth" && arr[1] == "thirtheenth"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
+  //line.setOptions({path: 'grid'});
+
   arr=[];
   ctr++;
   if(ctr >= 18){

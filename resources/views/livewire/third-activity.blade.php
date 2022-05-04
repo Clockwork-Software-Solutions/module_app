@@ -135,13 +135,14 @@ body {
   </div>
   <section class="droppable-elements">
     <div class="flex">
-    <div class="droppable" data-draggable-id="primary_consumers">
-    <span id="elementText" class="invisible" style="color: white; user-select:none;">Primary Consumers</span>
-    </div>
-    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
     <div class="droppable" data-draggable-id="producers">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Producers</span>
     </div>
+    <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
+    <div class="droppable" data-draggable-id="primary_consumers">
+    <span id="elementText" class="invisible" style="color: white; user-select:none;">Primary Consumers</span>
+    </div>
+    
     <div class="arrow fas fa-arrow-right my-auto text-xl"></div>
     <div class="droppable" data-draggable-id="secondary_consumers">
     <span id="elementText" class="invisible" style="color: white; user-select:none;">Secondary Consumers</span>
