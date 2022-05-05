@@ -224,9 +224,9 @@ body {
     arr.push(id);
 
       
-
+console.log(arr);
 //if right connection draw line
- if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1))
+ if((jQuery.inArray("elementText", arr) !== -1) || (jQuery.inArray("", arr) !== -1) || (jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1))
     {
       alert("Please select an image.");
       arr = [];

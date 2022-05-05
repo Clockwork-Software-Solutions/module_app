@@ -266,7 +266,7 @@ body {
     arr.push(id);
 
       
- if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("one_inner", arr) !== -1) ||  (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("two_inner", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("three_inner", arr) !== -1) || (jQuery.inArray("four", arr) !== -1) || (jQuery.inArray("four_inner", arr) !== -1) || (jQuery.inArray("five", arr) !== -1) || (jQuery.inArray("five", arr) !== -1)|| (jQuery.inArray("five_inner", arr) !== -1) || (jQuery.inArray("six", arr) !== -1)|| (jQuery.inArray("six_inner", arr) !== -1))
+ if((jQuery.inArray("elementText", arr) !== -1) || (jQuery.inArray("", arr) !== -1) || (jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("one_inner", arr) !== -1) ||  (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("two_inner", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("three_inner", arr) !== -1) || (jQuery.inArray("four", arr) !== -1) || (jQuery.inArray("four_inner", arr) !== -1) || (jQuery.inArray("five", arr) !== -1) || (jQuery.inArray("five", arr) !== -1)|| (jQuery.inArray("five_inner", arr) !== -1) || (jQuery.inArray("six", arr) !== -1)|| (jQuery.inArray("six_inner", arr) !== -1))
     {
       alert("Please select an image.");
       arr = [];

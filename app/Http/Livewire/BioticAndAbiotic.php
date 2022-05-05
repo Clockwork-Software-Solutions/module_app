@@ -13,6 +13,6 @@ class BioticAndAbiotic extends Component
 
     public function next()
     {
-        return redirect()->route('main');
+        return redirect()->route('bioticLast');
     }
 }

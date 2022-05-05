@@ -15,7 +15,7 @@ body {
 
 #play-again-btn {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   left: 55%;
   margin-left: -50px;
   font-size: 1rem;
@@ -54,13 +54,13 @@ body {
 }
 
 .draggable-elements {
- 
+  display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 8rem;
 }
 .draggable {
-  height: 8rem;
-  width: 8rem;
+  height: 6rem;
+  width: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,16 +77,16 @@ body {
 .droppable {
   height: 7rem;
   width: 7rem;
-  margin: 1rem 5rem;
-  display: flex;
-  justify-content: center;
+  margin: 1rem 5rem ;
+
+
   align-items: center;
   flex-direction: column;
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  background-color: transparent;
-  /* border: 3px dashed #111; */
+  background-color: #fff;
+  border: 3px dashed #111;
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .droppable span {
@@ -121,20 +121,6 @@ body {
   opacity: 0.1;
 }
 
-#div1 {
-  width: 610px;
-  height: 350px;
-  padding: 10px;
-
-}
-#div2 {
-  width: 610px;
-  height: 350px;
-  padding: 10px;
-
-  /*border: 1px solid #aaaaaa;*/
-}
-
 @media (max-width: 600px) {
   html { font-size: 14px; }
   .draggable-elements { margin: 1.5rem; }
@@ -143,81 +129,49 @@ body {
 <div >
     <div class="p-6">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Now you try. Classify Biotic and Abiotic</h1>
-        <button id="play-again-btn" class="bg-green-800 hover:bg-green-700">Play Again</button>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Drag the images in the right box and complete the food chain.</h1>
+        <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   
-  <section class="droppable-elements">
-    <div class="grid grid-cols-2">
-    <div class="col-span-1 border border-black text-center font-bold p-2"><span id="title">Biotic</span>
-    </div>
-    <div class="col-span-1 border border-black text-center font-bold p-2">Abiotic
-    </div>
-    <div id="" class="col-span-1 border border-black p-5 h-96">
-    <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <section class="draggable-element flex justify-center mt-0">
+    <div class="grid grid-cols-4">
+    <div >
+    <div id="one" class="droppable" data-draggable-id="algae" style="margin-top:150px;">
+    <span id="elementText" class="" style="color: white; user-select:none;">Algae</span>
     </div>
     </div>
-    <div id="" class="col-span-1 border border-black p-5 h-96">
-    <div id="div2" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div >
+    <div id="two" class="droppable col-span-1" data-draggable-id="fish">
+    <span id="elementText" class="" style="color: white; user-select:none;">Fish</span>
+    </div>
+    </div>
+    <div >
+    <div id="three" class="droppable col-span-1" data-draggable-id="seal">
+    <span id="elementText" class="" style="color: white; user-select:none;">Seal</span>
+    </div>
+    </div>
+    <div >
+     <div id="four" class="droppable col-span-1" data-draggable-id="shark" style="margin-top:150px;">
+    <span id="elementText" class="" style="color: white; user-select:none;">Shark</span>
     </div>
     </div>
     </div>
-
-
-   {{-- <div class="flex justify-center">
-    <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
-    </div>
-    <div id="div2" class="grid grid-cols-3" ondrop="drop2(event)" ondragover="allowDrop2(event)">
-    </div> --}}
-    
-    </div>
-
-    {{-- <div class="flex justify-center">
-
-    <div class="grid grid-cols-2" id="">
-    <div class="col-span-1 border border-black p-4 text-center font-bold">Competition</div>
-    <div class="col-span-1 border border-black p-4 text-center font-bold">Predation</div>
-    
-    <div class="border border-black p-10">
-    <div class="droppable col-span-1" data-draggable-id="competition">
-    <span id="elementText" class="" style="color: transparent; user-select:none;">Fighting Over Teritory</span>
-    </div>
-    </div>
-
-    <div class="border border-black p-10">  
-    <div class="droppable col-span-1" data-draggable-id="predation">
-    <span id="elementText" class="" style="color: transparent; user-select:none;">Fighting Over Food</span>
-    </div>
-    </div>
-
-    </div>
-
-    </div>
-</div> --}}
- 
   </section>
   
-  <section class="draggable-elements px-20 mb-5">
-  <div class="elems grid gap-6 grid-cols-6 px-10">
-  <img id="drag1" class="mx-3 rounded-full col-span-1" src="/storage/images/protists.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag2" class="mx-3 rounded-full col-span-1" src="/storage/images/plants.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag3" class="mx-3 rounded-full col-span-1" src="/storage/images/animals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag4" class="mx-3 rounded-full col-span-1" src="/storage/images/bacteria.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag5" class="mx-3 rounded-full col-span-1" src="/storage/images/fungus.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag6" class="mx-3 rounded-full col-span-1" src="/storage/images/water.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag7" class="mx-3 rounded-full col-span-1" src="/storage/images/soil.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag8" class="mx-3 rounded-full col-span-1" src="/storage/images/air.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag9" class="mx-3 rounded-full col-span-1" src="/storage/images/minerals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag10" class="mx-3 rounded-full col-span-1" src="/storage/images/light.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/lion.png" alt="Lion" draggable="true"id="lion"> --}}
-    {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/competition.png" alt="Goat" draggable="true" id="competition">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/predation.png" alt="Plant" draggable="true" id="predation"> --}}
-    </div>
+  <section class="draggable-elements">
+  <!-- <div class="px-20 flex"> -->
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/algae.png" alt="Grass" draggable="true"id="algae">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/fish.png" alt="Cow" draggable="true" id="fish">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/seal.png" alt="Tiger" draggable="true" id="seal">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/shark.png" alt="Tiger" draggable="true" id="shark">
   </section>
 
+<!-- <div id="test" class="h-full w-28 bg-green-800">
+    s
+</div> -->
 <div class="mt-0 flex justify-between">
 <div></div>
-<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
+<button id="next" wire:click="topic4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -244,30 +198,61 @@ body {
 
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/leader-line"></script>
 <script>
 
   $(window).on('load', function() {
+    //get id one
+    var algae = document.getElementById('one');
+    var fish = document.getElementById('two');
+    var seal = document.getElementById('three');
+    var shark = document.getElementById('four');
+    var path = 'arc';
+    var line = new LeaderLine(algae, fish, {hide: true, dash: false});
+    line.setOptions({startSocket: 'top', endSocket: 'left',path: path});
+      line.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+    var line1 = new LeaderLine(fish, seal, {hide: true, dash: false});
+    line1.setOptions({startSocket: 'right', endSocket: 'left',path: path});
+      line1.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+    var line1 = new LeaderLine(seal, shark, {hide: true, dash: false});
+    line1.setOptions({startSocket: 'right', endSocket: 'top',path: path});
+      line1.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+
     //set id sun to a variable
     //var sun = $('#sun');
-    var drag1 = $('#drag1');
-    var drag2 = $('#drag2');
-    var drag3 = $('#drag3');
-    var drag4 = $('#drag4');
-    var drag5 = $('#drag5');
-    var drag6 = $('#drag6');
-    var drag7 = $('#drag7');
-    var drag8 = $('#drag8');
-    var drag9 = $('#drag9');
-    var drag10 = $('#drag10');
+    var algae = $('#algae');
+    var fish = $('#fish');
+    var seal = $('#seal');
+    var shark = $('#shark');
     //var eagle = $('#eagle');
     //randomize the order of the elements
-    var elements = [drag1, drag2, drag3, drag4, drag5, drag6, drag7, drag8, drag9, drag10];
+    var elements = [algae, fish, seal, shark];
     var randomElements = shuffle(elements);
     //set the order of the elements
     //console.log(randomElements);
     //APPEND FLEX ELEMENTS TO THE DOm
-    $('.elems').append(randomElements);
+    $('.draggable-elements').append(randomElements);
     
     //sun.remove().insertAfter()
     //set random number between 0 and 5
@@ -334,114 +319,7 @@ anime({
 });
 </script>
 
-{{-- code code code --}}
-<script>
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-
-function drag(ev) {  
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-  let corrects = 0;
-const totalDraggableItem = 10;
- const correctAudio = new Audio("/storage/audio/success.mp3" );
-function drop(ev) {
-  ev.preventDefault();
-
-  var data = ev.dataTransfer.getData("text");
-  var divId = ev.target.id;
-
-    if((divId === "div1" && data === "drag1") || (divId === "div1" && data === "drag2") || (divId === "div1" && data === "drag3") || (divId === "div1" && data === "drag4") || (divId === "div1" && data === "drag5")){
-
-        ev.target.appendChild(document.getElementById(data));
-        //make the draggable false
-        document.getElementById(data).draggable = false;
-        corrects++;
-         if(corrects===Math.min(totalDraggableItem)) {
-             //draggableText.classList.remove("hidden");
-          playAgainBtn.style.display = "block";
-          nextBtn.style.display = "block";
-          textTitle.innerText = "Good Job! You got the right answer.";
-          setTimeout(() => {
-            playAudio(correctAudio);
-            playAgainBtn.classList.add("play-again-btn-entrance");
-            next.classList.add("next-entrance");
-            anime({
-                  targets: [droppableElements,arrowElements],
-                  scale: 1.25,
-                  duration: 1000,
-                  });
-          }, 50);
-         }
-    }else if((divId === "div2" && data === "drag6") || (divId === "div2" && data === "drag7") || (divId === "div2" && data === "drag8") || (divId === "div2" && data === "drag9") || (divId === "div2" && data === "drag10")){
-      ev.target.appendChild(document.getElementById(data));
-        //make the draggable false
-        document.getElementById(data).draggable = false;
-        corrects++;
-         if(corrects===Math.min(totalDraggableItem)) {
-             //draggableText.classList.remove("hidden");
-          playAgainBtn.style.display = "block";
-          nextBtn.style.display = "block";
-          textTitle.innerText = "Good Job! You got the right answer.";
-          setTimeout(() => {
-            playAudio(correctAudio);
-            playAgainBtn.classList.add("play-again-btn-entrance");
-            next.classList.add("next-entrance");
-            anime({
-                  targets: [droppableElements,arrowElements],
-                  scale: 1.25,
-                  duration: 1000,
-                  });
-          }, 50);
-         }
-    }
-    else{
-      const xMax = 16;
-    const audio = new Audio("/storage/audio/Quack.mp3" );
-    playAudio(audio);
-    //animate shake effect on wrong drop
-    anime({
-      targets: ev.target,
-    easing: 'easeInOutSine',
-    duration: 400,
-    borderColor: [
-      {
-        value: '#ff0000',
-      },
-      {
-        value: '#ff0000',
-      },
-      {
-        value: '#000000',
-      }
-    ],
-    translateX: [
-      {
-      value: xMax * -1,
-    },
-    {
-      value: xMax,
-    },
-    {
-      value: xMax/-2,
-    },
-    {
-      value: xMax/2,
-    },
-    {
-      value: 0
-    }
-    ], // All properties except 'scale' inherit 250ms delay
-      });
-
-
-    }
-}
-
-</script>
 
 
 
@@ -451,7 +329,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 2;
+const totalDraggableItems = 4;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 
@@ -515,7 +393,7 @@ function playAgainBtnClick() {
 
 
 
-function drops(event) {
+function drop(event) {
   event.preventDefault(); // This is in order to prevent the browser default handling of the data
   event.target.classList.remove("droppable-hover");
   const draggableElementData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
@@ -535,7 +413,7 @@ function drops(event) {
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     event.target.style.backgroundColor = "transparent";
     //set color of inner element
-    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold">`+event.target.innerText+`</span>`;
+    event.target.innerHTML = `<span class="" style="color: black; font-weight:bold; margin-top:1px">`+event.target.innerText+`</span>`;
     //event.target.innerText.color = "black";
     //window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
@@ -546,14 +424,14 @@ function drops(event) {
     //draggableText.classList.remove("hidden");
     playAgainBtn.style.display = "block";
     nextBtn.style.display = "block";
-    textTitle.innerText = "Good Job! You got the right answer.";
+    textTitle.innerText = "Good Job! This is the correct order.";
     setTimeout(() => {
       playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({
             targets: [droppableElements,arrowElements],
-            scale: 1.25,
+            scale: 0.85,
             duration: 1000,
             });
     }, 50);

@@ -1,22 +1,21 @@
 <div>
 <div class="w-full p-20">
 <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Food Chain and Food Web</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Bacteria And Animals</h1>
   </div>
 <div class="flex justify-center">
 {{-- <iframe id="video" width="585" height="400"
-src="https://www.youtube.com/embed/tgbNymZ7vqY">
+src="https://www.youtube.com/watch?v=jKlwCdrS_zc">
 </iframe> --}}
-<iframe width="585" height="400" src="https://www.youtube.com/embed/NvnrRw88x6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{{-- <iframe width="585" height="400" src="https://www.youtube.com/embed/NBmb-63zZMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
+<iframe width="585" height="400" src="https://www.youtube.com/embed/AJGvLNYOyH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{-- <iframe width="585" height="400" src="https://www.youtube.com/embed/u_2MUOWnYKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
+{{-- <iframe width="585" height="400" src="https://www.youtube.com/embed/jKlwCdrS_zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
 {{-- <video id="video" class="col-span-1" width="600" height="600" controls>
-  <source src="https://www.youtube.com/watch?v=NBmb-63zZMI" type="video/mp4"> --}}
-
+  <source src="/storage/videos/biotic_and_abiotic.mp4" type="video/mp4"> --}}
   {{-- <iframe class="" src="/storage/videos/nemo.mp4" type="video/mp4"></iframe> --}}
   {{-- <source src="movie.ogg" type="video/ogg"> --}}
-  {{-- Your browser does not support the video tag. --}}
-
-{{-- </video> --}}
+  {{-- Your browser does not support the video tag.
+</video> --}}
 
 
 </div>
@@ -32,6 +31,4 @@ document.querySelector('#play').addEventListener('click', function() {
   document.querySelector('#video').play();
 });
 </script>
-
-
 </div>

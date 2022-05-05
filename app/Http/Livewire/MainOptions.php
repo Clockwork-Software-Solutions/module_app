@@ -26,7 +26,7 @@ class MainOptions extends Component
     }
 
     public function topic4(){
-        return redirect()->route('bacteria');
+        return redirect()->route('bacteria_vid');
     }
 
     public function topic5(){

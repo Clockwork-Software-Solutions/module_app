@@ -7,7 +7,8 @@
 {{-- <iframe id="video" width="585" height="400"
 src="https://www.youtube.com/watch?v=jKlwCdrS_zc">
 </iframe> --}}
-<iframe width="585" height="400" src="https://www.youtube.com/embed/jKlwCdrS_zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="585" height="400" src="https://www.youtube.com/embed/u_2MUOWnYKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{-- <iframe width="585" height="400" src="https://www.youtube.com/embed/jKlwCdrS_zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
 {{-- <video id="video" class="col-span-1" width="600" height="600" controls>
   <source src="/storage/videos/biotic_and_abiotic.mp4" type="video/mp4"> --}}
   {{-- <iframe class="" src="/storage/videos/nemo.mp4" type="video/mp4"></iframe> --}}

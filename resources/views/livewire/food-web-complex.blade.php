@@ -258,7 +258,7 @@ body {
   <section class="droppable-elements">
    <div class="flex justify-end">
   <div></div>
-      <button id="next" wire:click="backToMain()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
+      <button id="next" wire:click="foodweb4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
 </div>
   </section>
   </div>
@@ -295,6 +295,7 @@ body {
   $(window).on('load', function() {
     var arr = [];
     var ctr = 0;
+    const correctAudio = new Audio("/storage/audio/success.mp3" );
     const playAgainBtn = document.querySelector("#play-again-btn");
     const nextBtn = document.querySelector("#next");
     const textTitle = document.querySelector('#textTitle');
@@ -314,7 +315,7 @@ body {
     arr.push(id);
  
     // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
- if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1) || (jQuery.inArray("seven", arr) !== -1) || (jQuery.inArray("eight", arr) !== -1) || (jQuery.inArray("nine", arr) !== -1) || (jQuery.inArray("ten", arr) !== -1) || (jQuery.inArray("eleven", arr) !== -1) || (jQuery.inArray("twelve", arr) !== -1) || (jQuery.inArray("thirteen", arr) !== -1) || (jQuery.inArray("fourteen", arr) !== -1) || (jQuery.inArray("fifteen", arr) !== -1) || (jQuery.inArray("sixteen", arr) !== -1))
+ if((jQuery.inArray("elementText", arr) !== -1) || (jQuery.inArray("", arr) !== -1) || (jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1) || (jQuery.inArray("seven", arr) !== -1) || (jQuery.inArray("eight", arr) !== -1) || (jQuery.inArray("nine", arr) !== -1) || (jQuery.inArray("ten", arr) !== -1) || (jQuery.inArray("eleven", arr) !== -1) || (jQuery.inArray("twelve", arr) !== -1) || (jQuery.inArray("thirteen", arr) !== -1) || (jQuery.inArray("fourteen", arr) !== -1) || (jQuery.inArray("fifteen", arr) !== -1) || (jQuery.inArray("sixteen", arr) !== -1))
     {
       alert("Please select an image.");
       arr = [];
@@ -334,7 +335,8 @@ if((arr[0] == "fifth" && arr[1] == "first") || (arr[0] == "fifth" && arr[1] == "
 || (arr[0] == "sixteenth" && arr[1] == "thirtheenth"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
-  //line.setOptions({path: 'grid'});
+  line.setOptions({startSocket: 'top',endSocket: 'bottom', path: 'arc',  startSocketGravity: [192, -172],
+  endSocketGravity: [-192, -172]});
 
   arr=[];
   ctr++;
@@ -344,7 +346,7 @@ if((arr[0] == "fifth" && arr[1] == "first") || (arr[0] == "fifth" && arr[1] == "
     nextBtn.style.display = "block";
     textTitle.innerText = "Good Job! This is the correct order.";
     setTimeout(() => {
-      //playAudio(correctAudio);
+      playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({

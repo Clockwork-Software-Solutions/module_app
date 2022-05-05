@@ -213,6 +213,7 @@ body {
   $(window).on('load', function() {
     var arr = [];
     var ctr = 0;
+    const correctAudio = new Audio("/storage/audio/success.mp3" );
     const playAgainBtn = document.querySelector("#play-again-btn");
     const nextBtn = document.querySelector("#next");
     const textTitle = document.querySelector('#textTitle');
@@ -234,7 +235,7 @@ body {
     // first = fox, second = bird, third = cat, fourth = slug, fifth = grass, sixth = rabbit
 
 //if right connection draw line
- if((jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1))
+ if((jQuery.inArray("elementText", arr) !== -1) || (jQuery.inArray("", arr) !== -1) || (jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1))
     {
       alert("Please select an image.");
       arr = [];
@@ -252,7 +253,7 @@ if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] ==
     nextBtn.style.display = "block";
     textTitle.innerText = "Good Job! This is the correct order.";
     setTimeout(() => {
-      //playAudio(correctAudio);
+      playAudio(correctAudio);
       playAgainBtn.classList.add("play-again-btn-entrance");
       next.classList.add("next-entrance");
        anime({

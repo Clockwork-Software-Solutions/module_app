@@ -44,13 +44,13 @@ body {
 }
 
 #next{
-  margin-top: 330px;
+  margin-top: 20px;
   display: none;
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
 }
 #next.next-entrance {
-  margin-top: 330px;
+  margin-top: 20px;
   opacity: 1;
   transform: translateX(2rem);
 }
@@ -68,9 +68,9 @@ body {
   justify-content: center;
   font-size: 5rem;
   margin: 0rem 2rem;
-  cursor: pointer;
+  cursor: move;
   transition: opacity 0.2s;
-  border: none;
+  border: solid black 2px;
   padding: 4px;
 }
 .draggable:hover {
@@ -79,9 +79,9 @@ body {
 .droppable {
   height: 7rem;
   width: 7rem;
-  margin: 1rem 1rem;
-  display: flex;
-  justify-content: center;
+  margin: 1rem 3rem ;
+
+
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -89,7 +89,6 @@ body {
   font-weight: bold;
   background-color: #fff;
   border: 3px dashed #111;
-  border-radius: 50%;
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .droppable span {
@@ -132,15 +131,41 @@ body {
 <div >
     <div class="p-8">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another example.</h1>
+  <h1 id="textTitle" class="text-3xl mb-0 mx-14 ">Here's another example.</h1>
   <div class="">
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   </div>
   <div class="px-10">
     <section class="draggable-element flex justify-center mt-10">
-    
-    <div class="elems flex h-10">
+     <div class="grid grid-cols-5">
+     <div>
+    <div id="one" class="droppable" data-draggable-id="grass" style="margin-top:220px;">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Grass</span>
+    </div>
+    </div>
+    <div>
+    <div id="two" class="droppable" data-draggable-id="grasshopper" style="margin-top:120px;">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Grasshopper</span>
+    </div>
+    </div>
+    <div >
+    <div id="three" class="droppable col-span-1" data-draggable-id="frog">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Frog</span>
+    </div>
+    </div>
+    <div >
+    <div id="four" class="droppable col-span-1" data-draggable-id="snake" style="margin-top:120px;">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Snake</span>
+    </div>
+    </div>
+    <div >
+     <div id="five" class="droppable col-span-1" data-draggable-id="hawk" style="margin-top:220px;">
+    <span id="elementText" class="" style="color: transparent; user-select:none;">Hawk</span>
+    </div>
+    </div>
+    </div>
+    {{-- <div class="elems flex h-10">
     <div id="one" class="text-center">
     <img id = "first" class="draggable bg-white" style="color: #fff; margin-top:220px; background-color: transparent; margin-right: 100px" src="/storage/images/grass.png" alt="Light" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none; margin-right: 80px">Grass</span>
@@ -161,19 +186,27 @@ body {
     <img id="last" class="draggable bg-white" style="color: #fff; margin-top:220px; background-color: transparent;" src="/storage/images/hawk.png" alt="Lion" draggable="false">
         <span id="elementText" class="text-sm bold" style="color: black; user-select:none;">Hawk</span>
     </div>
-    </div>
+    </div> --}}
 
+  </section>
+  <section class="draggable-elements">
+  <div class="elems flex h-10">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grass.png" alt="Grass" draggable="true"id="grass">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/grasshopper.png" alt="Cow" draggable="true" id="grasshopper">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/frog.png" alt="Tiger" draggable="true" id="frog">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/snake.png" alt="Tiger" draggable="true" id="snake">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/hawk.png" alt="Tiger" draggable="true" id="hawk">
+  </div>
   </section>
 
 
-
-  <section class="droppable-elements">
+  {{-- <section class="droppable-elements"> --}}
 
   <div class="flex justify-end">
   <div></div>
             <button id="next" wire:click="topic7()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
 </div>
-  </section>
+  {{-- </section> --}}
   </div>
 
 <div class="mt-4 flex justify-between">
@@ -208,6 +241,61 @@ body {
 <script>
 
   $(window).on('load', function() {
+    var grass = document.getElementById('one');
+    var grasshopper = document.getElementById('two');
+    var frog = document.getElementById('three');
+    var snake = document.getElementById('four');
+    var hawk = document.getElementById('five');
+    var path = 'arc';
+    var line = new LeaderLine(grass, grasshopper, {hide: true, dash: false});
+    line.setOptions({startSocket: 'top', endSocket: 'left',path: path});
+      line.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+    var line1 = new LeaderLine(grasshopper, frog, {hide: true, dash: false});
+    line1.setOptions({startSocket: 'top', endSocket: 'left',path: path});
+      line1.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+    var line2 = new LeaderLine(frog, snake, {hide: true, dash: false});
+    line2.setOptions({startSocket: 'right', endSocket: 'top',path: path});
+      line2.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+    var line3 = new LeaderLine(snake, hawk, {hide: true, dash: false});
+    line3.setOptions({startSocket: 'right', endSocket: 'top',path: path});
+      line3.show('draw', {
+
+      animOptions: {
+      duration: 3000,
+      timing: [0.5, 0, 1, 0.42],
+    }
+    })
+
+
+
+
+
+
+
+
+
+
     var arr = [];
     var ctr = 0;
     const playAgainBtn = document.querySelector("#play-again-btn");
@@ -314,14 +402,13 @@ line.show('draw', {
 
 
 
-    var light = $('#light');
     var grass = $('#grass');
-    var consumers = $('#consumers');
-     var consumers2 = $('#consumers2');
-    var decomposers = $('#decomposers');
-    var dead_animals = $('#dead_animals');
+    var grasshopper = $('#grasshopper');
+    var frog = $('#frog');
+    var snake = $('#snake');
+    var hawk = $('#hawk');
 
-    var elements = [light,grass,consumers,consumers2,decomposers,dead_animals];
+    var elements = [grass, grasshopper, frog, snake, hawk];
     var randomElements = shuffle(elements);
 
     $('.elems').append(randomElements);
@@ -391,7 +478,7 @@ const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
 let correct = 0;
 let total = 0;
-const totalDraggableItems = 6;
+const totalDraggableItems = 5;
 const playAgainBtn = document.querySelector("#play-again-btn");
 const nextBtn = document.querySelector("#next");
 

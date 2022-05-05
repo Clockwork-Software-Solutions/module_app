@@ -149,65 +149,65 @@ body {
     <img id = "first" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/wolf.png" alt="Light" draggable="false">
         <span id="elementText" class="" style="color: black; user-select:none;">Wolf</span>
     </div>
-    <div id="one" class=" col-span-1 font-bold text-xs">
+    <div id="two" class=" col-span-1 font-bold text-xs">
     <img id = "second" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/mountain_lion.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-7" style="color: black; user-select:none;">Mountain Lion</span>
     </div>
-    <div id="one" class="col-span-1  font-bold text-xs">
+    <div id="three" class="col-span-1  font-bold text-xs">
     <img id = "third" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/cat.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-14" style="color: black; user-select:none;">Cat</span>
     </div>
     </div>
     <div class="grid grid-cols-5 items-center gap-x-0 gap-y-10 mt-10">
-    <div id="one" class="col-span-1 px-5 font-bold text-xs">
+    <div id="four" class="col-span-1 px-5 font-bold text-xs">
     <img id  = "fourth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/ringtail.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-11" style="color: black; user-select:none;">Ringtail</span>
     </div>
-    <div id="one" class="col-span-1 font-bold text-xs">
+    <div id="five" class="col-span-1 font-bold text-xs">
     <img id = "fifth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/whiptail.png" alt="Light" draggable="false">
         <span id="elementText" class="" style="color: black; user-select:none; margin-left: 40px;">Whiptail</span>
     </div>
-    <div id="one" class="col-span-1 font-bold text-xs">
+    <div id="six" class="col-span-1 font-bold text-xs">
     <img id = "sixth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/eagle.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-12" style="color: black; user-select:none;">Eagle</span>
     </div>
-    <div id="one" class="col-span-1 font-bold text-xs">
+    <div id="seven" class="col-span-1 font-bold text-xs">
     <img id = "seventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/jackrabbit.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-10" style="color: black; user-select:none;">Jackrabbit</span>
     </div>
-    <div id="one" class="col-span-1  font-bold text-xs">
+    <div id="eight" class="col-span-1  font-bold text-xs">
     <img id = "eighth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/pine_marten.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-8" style="color: black; user-select:none;">Pine Marten</span>
     </div>
     </div>
     <div class="grid grid-cols-6 items-center gap-x-0 mt-28">
-    <div id="one" class="col-span-1 font-bold text-xs">
+    <div id="nine" class="col-span-1 font-bold text-xs">
     <img id = "ninth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/rat.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-16" style="color: black; user-select:none;">Rat</span>
     </div>
-      <div id="one" class="col-span-1 px-10 font-bold text-xs">
+      <div id="ten" class="col-span-1 px-10 font-bold text-xs">
     <img id = "tenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/nuthatch.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-10" style="color: black; user-select:none;">Nuthatch</span>
     </div>
-    <div id ="one" class="col-span-1 font-bold text-xs">
+    <div id ="eleven" class="col-span-1 font-bold text-xs">
     <img id = "eleventh" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/frog.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-14" style="color: black; user-select:none;">Frog</span>
     </div>
-    <div id="one" class="col-span-1 font-bold text-xs">
+    <div id="twelve" class="col-span-1 font-bold text-xs">
     <img id = "twelvth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/butterfly.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-12" style="color: black; user-select:none;">Butterfly</span>
     </div>
-    <div id="one" class="col-span-1 text-center px-5 font-bold text-xs">
+    <div id="thirteen" class="col-span-1 text-center px-5 font-bold text-xs">
     <img id = "thirteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/squirrel.png" alt="Light" draggable="false">
         <span id="elementText" class="" style="color: black; user-select:none;">Squirrel</span>
     </div>
-    <div id="one" class="col-span-1 font-bold text-xs">
+    <div id="fourteen" class="col-span-1 font-bold text-xs">
     <img id = "fourteenth" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/deer.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-16" style="color: black; user-select:none;">Deer</span>
     </div>
     </div>
     <div class="flex justify-center mt-40 font-bold text-xs">
-    <div id="one" class="">
+    <div id="fifteen" class="">
     <img id = "last" class="draggable bg-white" style="color: #fff; background-color: transparent;" src="/storage/images/vegetation.png" alt="Light" draggable="false">
         <span id="elementText" class="ml-8" style="color: black; user-select:none;"></span>
     </div>
@@ -223,7 +223,7 @@ body {
   <section class="droppable-elements">
    <div class="flex justify-end">
   <div></div>
-      <button id="next" wire:click="foodweb4()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
+      <button id="next" wire:click="backToMain()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
 </div>
   </section>
   </div>
@@ -277,6 +277,13 @@ body {
   else
   {
     arr.push(id);
+
+ if((jQuery.inArray("elementText", arr) !== -1) || (jQuery.inArray("", arr) !== -1) || (jQuery.inArray("one", arr) !== -1) || (jQuery.inArray("two", arr) !== -1) || (jQuery.inArray("three", arr) !== -1) || (jQuery.inArray("four", arr) !== -1)  || (jQuery.inArray("five", arr) !== -1)  || (jQuery.inArray("six", arr) !== -1) || (jQuery.inArray("seven", arr) !== -1) || (jQuery.inArray("eight", arr) !== -1) || (jQuery.inArray("nine", arr) !== -1) || (jQuery.inArray("ten", arr) !== -1) || (jQuery.inArray("eleven", arr) !== -1) || (jQuery.inArray("twelve", arr) !== -1) || (jQuery.inArray("thirteen", arr) !== -1) || (jQuery.inArray("fourteen", arr) !== -1) || (jQuery.inArray("fifteen", arr) !== -1))
+    {
+      alert("Please select an image.");
+      arr = [];
+    }else {
+
      var first = document.getElementById(arr[0]);
      var second = document.getElementById(arr[1]);
 
@@ -302,6 +309,9 @@ if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] ==
 || (arr[0] == "last" && arr[1] == "fourteenth"))
 {
   var line = new LeaderLine(first, second, {hide: true, dash: true});
+  //if line exists
+
+  line.setOptions({startSocket: 'top',endSocket: 'bottom', path: 'grid'});
   arr=[];
   ctr++;
   if(ctr >= 37){
@@ -320,6 +330,8 @@ if((arr[0] == "fourth" && arr[1] == "first") || (arr[0] == "fourth" && arr[1] ==
             });
     }, 50);
   }
+ 
+
 line.show('draw', {
   startPlug: 'behind',
   endPlug: 'behind',
@@ -328,6 +340,7 @@ line.show('draw', {
     timing: [0.5, 0, 1, 0.42],
   }
 })
+
  
 }else{
   const xMax = 16;
@@ -370,6 +383,7 @@ line.show('draw', {
     arr=[];
 }
 
+    }
 
   }
 });

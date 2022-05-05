@@ -143,7 +143,7 @@ body {
 <div >
     <div class="p-6">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Classify Biotic and Abiotic</h1>
+  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Biotic and Abiotic Classifications</h1>
         <button id="play-again-btn" class="bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   
@@ -155,10 +155,50 @@ body {
     </div>
     <div id="" class="col-span-1 border border-black p-5 h-96">
     <div id="div1" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/protists.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-8 text-sm font-bold" style="color: black; user-select:none;">Protists</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/plants.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-10 text-sm font-bold" style="color: black; user-select:none;">Plants</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/animals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-8 text-sm font-bold" style="color: black; user-select:none;">Animals</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/bacteria.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-8 text-sm font-bold" style="color: black; user-select:none;">Bacteria</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/fungus.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-10 text-sm font-bold" style="color: black; user-select:none;">Fungi</span>
+    </div>
     </div>
     </div>
     <div id="" class="col-span-1 border border-black p-5 h-96">
     <div id="div2" class="grid grid-cols-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/water.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-10 text-sm font-bold" style="color: black; user-select:none;">Water</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/soil.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-10 text-sm font-bold" style="color: black; user-select:none;">Soil</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/air.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-14 text-sm font-bold" style="color: black; user-select:none;">Air</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 rounded-full col-span-1" src="/storage/images/minerals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-8 text-sm font-bold" style="color: black; user-select:none;">Minerals</span>
+    </div>
+    <div class="">
+      <img id="" class="mx-3 mb-4 rounded-full col-span-1" src="/storage/images/light.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+          <span id="elementText" class="ml-10 mt-4 text-sm font-bold" style="color: black; user-select:none;">Light</span>
+    </div>
     </div>
     </div>
     </div>
@@ -197,18 +237,18 @@ body {
  
   </section>
   
-  <section class="draggable-elements px-20 mb-5">
+  <section class="draggable-elements px-20 mb-0">
   <div class="elems grid gap-6 grid-cols-5 px-10">
-  <img id="drag1" class="mx-3 rounded-full col-span-1" src="/storage/images/protists.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag2" class="mx-3 rounded-full col-span-1" src="/storage/images/plants.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag3" class="mx-3 rounded-full col-span-1" src="/storage/images/animals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag4" class="mx-3 rounded-full col-span-1" src="/storage/images/bacteria.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag5" class="mx-3 rounded-full col-span-1" src="/storage/images/fungus.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag6" class="mx-3 rounded-full col-span-1" src="/storage/images/water.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag7" class="mx-3 rounded-full col-span-1" src="/storage/images/soil.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag8" class="mx-3 rounded-full col-span-1" src="/storage/images/air.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag9" class="mx-3 rounded-full col-span-1" src="/storage/images/minerals.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-  <img id="drag10" class="mx-3 rounded-full col-span-1" src="/storage/images/light.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+  {{-- <img id="drag1" class="mx-3 rounded-full col-span-1" src="/storage/images/protists.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag2" class="mx-3 rounded-full col-span-1" src="/storage/images/plants.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag3" class="mx-3 rounded-full col-span-1" src="/storage/images/animals.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag4" class="mx-3 rounded-full col-span-1" src="/storage/images/bacteria.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag5" class="mx-3 rounded-full col-span-1" src="/storage/images/fungus.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag6" class="mx-3 rounded-full col-span-1" src="/storage/images/water.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag7" class="mx-3 rounded-full col-span-1" src="/storage/images/soil.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag8" class="mx-3 rounded-full col-span-1" src="/storage/images/air.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag9" class="mx-3 rounded-full col-span-1" src=/storage/images/minerals.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
+  {{-- <img id="drag10" class="mx-3 rounded-full col-span-1" src="/storage/images/light.png" draggable="true" ondragstart="drag(event)" width="100" height="100"> --}}
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/lion.png" alt="Lion" draggable="true"id="lion"> --}}
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/competition.png" alt="Goat" draggable="true" id="competition">
     <img class="draggable bg-white" style="color: #fff;" src="/storage/images/predation.png" alt="Plant" draggable="true" id="predation"> --}}
@@ -217,7 +257,7 @@ body {
 
 <div class="mt-0 flex justify-between">
 <div></div>
-<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
+<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -248,6 +288,8 @@ body {
 <script>
 
   $(window).on('load', function() {
+    nextBtn.style.display = "block";
+      next.classList.add("next-entrance");
     //set id sun to a variable
     //var sun = $('#sun');
     var drag1 = $('#drag1');
