@@ -607,20 +607,36 @@ setTimeout(() => {
       num = i;
       plantImageArrayFirst.push(num);
     }
-    
+    var request;
     var time = 0;
 
-    var interval = setInterval(function() { 
-    if (time <= plantImageArrayFirst.length-1){
-      var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
-      plantImage.src = path;
+    const animate = () => {
+      if (time <= plantImageArrayFirst.length-1){
+        request = requestAnimationFrame(animate);
+        var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+         plantImage.src = path;
+          time++;
+          console.log(time);
+      }else{
+        cancelAnimationFrame(request);
+      }
+    }
+
+    animate();
+    
+    
+   
+    //var interval = setInterval(function() { 
+    //if (time <= plantImageArrayFirst.length-1){
+   //   var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+    //  plantImage.src = path;
         //console.log(path);
-        time++;
-    }
-    else { 
-        clearInterval(interval);
-    }
-    }, 20);
+   //     time++;
+   // }
+   // else { 
+   //     clearInterval(interval);
+   // }
+   // }, 20);
 
   
     const sunflower = document.querySelector('#sunflower');
@@ -730,20 +746,35 @@ setTimeout(() => {
       num = i;
       plantImageArrayFirst.push(num);
     }
-    
+    var request;
     var time = 0;
 
-    var interval = setInterval(function() { 
-    if (time <= plantImageArrayFirst.length-1){
-      var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
-      plantImage.src = path;
+
+    const animate = () => {
+      if (time <= plantImageArrayFirst.length-1){
+        request = requestAnimationFrame(animate);
+        var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+         plantImage.src = path;
+          time++;
+          console.log(time);
+      }else{
+        cancelAnimationFrame(request);
+      }
+    }
+
+    animate();
+
+    //var interval = setInterval(function() { 
+    //if (time <= plantImageArrayFirst.length-1){
+    //  var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+    //  plantImage.src = path;
         //console.log(path);
-        time++;
-    }
-    else { 
-        clearInterval(interval);
-    }
-    }, 20);
+    //    time++;
+   // }
+   // else { 
+   //     clearInterval(interval);
+   // }
+   // }, 20);
 
     const sunflower = document.querySelector('#sunflower');
     const images = document.querySelectorAll('.images');
@@ -841,20 +872,39 @@ setTimeout(() => {
       num = i;
       plantImageArrayFirst.push(num);
     }
-    
+
+
+     var request;
     var time = 0;
 
-    var interval = setInterval(function() { 
-    if (time <= plantImageArrayFirst.length-1){
-      var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
-      plantImage.src = path;
+
+    const animate = () => {
+      if (time <= plantImageArrayFirst.length-1){
+        request = requestAnimationFrame(animate);
+        var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+         plantImage.src = path;
+          time++;
+          console.log(time);
+      }else{
+        cancelAnimationFrame(request);
+      }
+    }
+
+    animate();
+    
+    //var time = 0;
+
+    //var interval = setInterval(function() { 
+    //if (time <= plantImageArrayFirst.length-1){
+    //  var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+    //  plantImage.src = path;
         //console.log(path);
-        time++;
-    }
-    else { 
-        clearInterval(interval);
-    }
-    }, 20);
+    //    time++;
+    //}
+    //else { 
+    //    clearInterval(interval);
+    //}
+    //}, 20);
 
     const sunflower = document.querySelector('#sunflower');
     const images = document.querySelectorAll('.images');
@@ -953,20 +1003,39 @@ setTimeout(() => {
       num = i;
       plantImageArrayFirst.push(num);
     }
-    
+
+
+     var request;
     var time = 0;
 
-    var interval = setInterval(function() { 
-    if (time <= plantImageArrayFirst.length-1){
-      var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
-      plantImage.src = path;
+
+    const animate = () => {
+      if (time <= plantImageArrayFirst.length-1){
+        request = requestAnimationFrame(animate);
+        var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+         plantImage.src = path;
+          time++;
+          console.log(time);
+      }else{
+        cancelAnimationFrame(request);
+      }
+    }
+
+    animate();
+    
+    //var time = 0;
+
+    //var interval = setInterval(function() { 
+    //if (time <= plantImageArrayFirst.length-1){
+    //  var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+    //  plantImage.src = path;
         //console.log(path);
-        time++;
-    }
-    else { 
-        clearInterval(interval);
-    }
-    }, 20);
+    //    time++;
+    //}
+    //else { 
+    //    clearInterval(interval);
+   //}
+    //}, 20);
 
     const sunflower = document.querySelector('#sunflower');
     const images = document.querySelectorAll('.images');
