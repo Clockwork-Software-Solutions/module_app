@@ -53,10 +53,44 @@ body {
   transform: translateX(2rem);
 }
 
+.text span {
+   opacity: 0;
+}
+.text span.revealed {
+   opacity: 1;
+}
+.text span.green {
+   color: #27ae60;
+}
+.text span.red {
+   color: #ff0000;
+}
+
+
+/* Demo styles */
+.text {
+   font-size: 2vw;
+   word-spacing: 0.2em;
+   margin: 0 auto;
+   background: #fff;
+   padding: 1em;
+   border-bottom: 1vw solid #db6935;
+   position:relative;
+   line-height: 1.2em;
+}
+.corner {
+   position:absolute;
+   width: 2vw;
+   right:2vw;
+   bottom:0;
+   transform: translateY(80%); 
+}
+
+
 .draggable-elements {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 0rem;
 }
 .draggable {
   height: 6rem;
@@ -135,24 +169,45 @@ body {
   </div>
   <section class="droppable-elements">
 
-    <div class="grid grid-cols-3">
-
-    <div class="col-span-1 items-center">
-    
+    <div class="grid grid-cols-3 bg-green-700 border rounded-lg">
+   
+    <div class="elems col-span-1 py-5 grid gap-y-6 items-center">
+    <div id="one">
     <img class="draggable bg-transparent" style="color: #fff;" src="/storage/images/sun.png" alt="Sun" draggable="true"id="sun">
+    <span class="ml-16 text-sm font-bold text-white">Sun</span>
+    </div>
+    <div id="two">
     <img class="draggable bg-transparent" style="color: #fff;" src="/storage/images/fertilizer.png" alt="Sun" draggable="true" id="fertilizer">
+    <span class="ml-12 text-sm font-bold text-white">Fertilizer</span>
+    </div>
+    <div id="three">
     <img class="draggable bg-transparent" style="color: #fff;" src="/storage/images/watering-can.png" alt="Sun" draggable="true" id="water">
+    <span class="ml-16 text-sm font-bold text-white">Water</span>
+    </div>
+    <div id="four">
     <img class="draggable bg-transparent" style="color: #fff;" src="/storage/images/carbon-dioxide.png" alt="Sun" draggable="true"  id="carbon-dioxide">
+    <span class="ml-8 text-sm font-bold text-white">Carbon-Dioxide</span>
+    </div>
+  
     {{-- <img class="draggable bg-transparent" style="color: #fff;" src="/storage/images/eagle.png" alt="Sun" draggable="true"  id="eagle"> --}}
     
     </div>
 
-    <div class="col-span-1" style="background-color: #F5F4E0">
+    <div class="col-span-1 my-auto" style="background-color: #F5F4E0">
     <div class="droppable flex justify-center align">
     <img class="h-72 w-80" src="/storage/images/plant_grow/frame_000 (45).gif" alt="Grass" draggable="false" id="sunflower">
     </div>
     
     </div>
+
+        <div class="col-span-1 mt-24 p-10">
+        <div class="text"> 
+        <svg class="corner" viewBox="0 0 65 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M35 3.5L65 6.5V62L0 0L35 3.5Z" fill="white"/>
+        </svg>
+        </div>
+
+        </div>
 
      
     </div>
@@ -182,7 +237,7 @@ body {
 </div> -->
 <div class="mt-4 flex justify-between">
 <div></div>
-<button id="next" wire:click="finish()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Finish</button>
+<button id="next" wire:click="next()" class="font-bold text-md bg-green-800 border-green-800 text-white rounded-md px-4 py-2 mr-14 hover:bg-green-700">Next</button>
  {{-- position: absolute;
   top: 2.5rem;
   left: 55%;
@@ -213,16 +268,17 @@ body {
 
   $(window).on('load', function() {
 
-    //set id sun to a variable
-    var sunlight = $('#sunlight');
-    var carbon_dioxide = $('#carbon_dioxide');
-    var water = $('#water');
-    var oxygen = $('#oxygen');
-    var glucose = $('#glucose');
-    var elements = [sunlight, carbon_dioxide, water, oxygen, glucose];
-    var randomElements = shuffle(elements);
 
-   // $('.draggable-elements').append(randomElements);
+
+    //set id sun to a variable
+    var sun = $('#one');
+    var fertilizer = $('#two');
+    var water = $('#three');
+    var carbon = $('#four');
+    var elements = [ sun, fertilizer, water, carbon];
+    var randomElements = shuffle(elements);
+    
+    $('.elems').append(randomElements);
     
   }
 
@@ -319,6 +375,11 @@ anime({
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
 const arrowElements = document.querySelectorAll(".arrow");
+var isFertilizer = false;
+var isWater = false;
+var isSun = false;
+var isCarbonDioxide = false;
+var toComplete = 45;
 let correct = 0;
 let total = 0;
 const totalDraggableItems = 5;
@@ -382,16 +443,15 @@ function playAgainBtnClick() {
       window.location.reload();
 }
 
-function loopThroughFrames() {
-   console.log("hello!");
-}
 
 
 function drop(event) {
+
   event.preventDefault(); // This is in order to prevent the browser default handling of the data
   event.target.classList.remove("droppable-hover");
   const draggableElementData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
   //const draggableElementText = document.querySelector('.elementText');
+
 
   //console.log(event.dataTransfer.getData("class") + " ");
   //draggableElementText.classList.remove("hidden");
@@ -401,12 +461,81 @@ function drop(event) {
   const droppedElemWater = document.querySelector('#waters');
   const droppedElemOXygen = document.querySelector('#air');
   const droppedElemGlucose = document.querySelector('#sugar');
-
+  var container = document.querySelector(".text");
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = draggableElementData === droppableElementData;
-  console.log(draggableElementData);
   total++;
-  if(draggableElementData == "fertilizer") {
+
+       if(container.querySelectorAll("span")){
+      container.querySelectorAll("span").forEach(span => {
+        span.remove();
+      }
+      );
+    }
+
+
+  if(draggableElementData == "fertilizer" && isFertilizer == false && isWater == false && isSun == false && isCarbonDioxide == false) {
+    
+    var speeds = {
+   pause: 100, //Higher number = longer delay
+   slow: 120,
+   normal: 90,
+   fast: 40,
+   superFast: 20
+};
+
+textLines = [
+   { speed: speeds.superFast, string: "Great!" },
+   { speed: speeds.pause, string: "", pause: true },
+   { speed: speeds.superFast, string: "You got the first one." }
+];
+
+
+var characters = [];
+textLines.forEach((line, index) => {
+   if (index < textLines.length - 1) {
+      line.string += " "; //Add a space between lines
+   }
+  
+
+
+   line.string.split("").forEach((character) => {
+      var span = document.createElement("span");
+      span.textContent = character;
+      container.appendChild(span);
+      characters.push({
+         span: span,
+         isSpace: character === " " && !line.pause,
+         delayAfter: line.speed,
+         classes: line.classes || []
+      });
+   });
+});
+
+function revealOneCharacter(list) {
+   var next = list.splice(0, 1)[0];
+   next.span.classList.add("revealed");
+   next.classes.forEach((c) => {
+      next.span.classList.add(c);
+   });
+   var delay = next.isSpace && !next.pause ? 0 : next.delayAfter;
+
+   if (list.length > 0) {
+      setTimeout(function () {
+         revealOneCharacter(list);
+      }, delay);
+   }
+}
+
+//Kick it off
+setTimeout(() => {
+   revealOneCharacter(characters);   
+}, 200)
+    
+    
+    
+    
+    
     //get plantImage
     const plantImage = document.querySelector('#sunflower');
     
@@ -448,82 +577,8 @@ function drop(event) {
     event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 3rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 10px 10px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
     correct++;
 
-
-
-
-
-    //draw leader line
-   // if(draggableElementData == "sunlight")
-    //{
-
-     //   var line = new LeaderLine(droppedElemSun, sunflower, {hide: true, dash: false});
-     //   line.setOptions({startSocket: 'right', endSocket: 'top', path: 'arc'});
-     //   line.show('draw', {
-        
-     //   startPlug: 'behind',
-     //   endPlug: 'behind',
-     //   animOptions: {
-     //   duration: 3000,
-     //   timing: [0.5, 0, 1, 0.42],
-     //   }
-     //   });
-    //}
-    //else if(draggableElementData == "carbon_dioxide")
-    //{
-    //    var line = new LeaderLine(droppedElemCarbon, sunflower, {hide: true, dash: false});
-    //    line.setOptions({startSocket: 'right', endSocket: 'left', path: 'straight'});
-    //    line.show('draw', {
-    //    startPlug: 'behind',
-    //    endPlug: 'behind',
-    //    animOptions: {
-    //    duration: 3000,
-    //    timing: [0.5, 0, 1, 0.42],
-    //    }
-    //    });
-   // }
-    //else if(draggableElementData == "water")
-    //{
-    //    var line = new LeaderLine(droppedElemWater, sunflower, {hide: true, dash: false});
-    //    line.setOptions({startSocket: 'right', endSocket: 'bottom', path: 'straight'});
-    //    line.show('draw', {
-    //    startPlug: 'behind',
-    //    endPlug: 'behind',
-    //    animOptions: {
-    //    duration: 3000,
-    //    timing: [0.5, 0, 1, 0.42],
-    //    }
-    //    });
-        
-    //}
-    //else if(draggableElementData == "oxygen")
-    //{
-     //   var line = new LeaderLine(sunflower, droppedElemOXygen, {hide: true, dash: false});
-     //   line.setOptions({startSocket: 'right', endSocket: 'left', path: 'straight'});
-    //    line.show('draw', {
-    //    startPlug: 'behind',
-    //    endPlug: 'behind',
-    //    animOptions: {
-    //    duration: 3000,
-    //    timing: [0.5, 0, 1, 0.42],
-    //    }
-    //    });
-        
-   // }
-    //else if(draggableElementData == "glucose")
-    //{
-     //   var line = new LeaderLine(sunflower, droppedElemGlucose, {hide: true, dash: false});
-     //   line.setOptions({startSocket: 'right', endSocket: 'left', path: 'straight'});
-    //    line.show('draw', {
-     //   startPlug: 'behind',
-     //   endPlug: 'behind',
-     //   animOptions: {
-     //   duration: 3000,
-     //   timing: [0.5, 0, 1, 0.42],
-     //   }
-     //   });
-        
-    //}
-
+    isFertilizer = true;
+    toComplete = 128;
 
 
     if(correct===Math.min(totalDraggableItems)) { // Game Over!!
@@ -541,7 +596,69 @@ function drop(event) {
             });
     }, 50);
   } 
-  }else if(draggableElementData == "water"){
+  }else if(draggableElementData == "water" && isFertilizer == true && isWater == false && isSun == false && isCarbonDioxide == false) {
+
+
+    var speeds = {
+   pause: 100, //Higher number = longer delay
+   slow: 120,
+   normal: 90,
+   fast: 40,
+   superFast: 20
+};
+
+textLines = [
+   { speed: speeds.superFast, string: "Good job!" },
+   { speed: speeds.pause, string: "", pause: true },
+   { speed: speeds.superFast, string: "Drag the next image we need." }
+];
+
+
+var characters = [];
+textLines.forEach((line, index) => {
+   if (index < textLines.length - 1) {
+      line.string += " "; //Add a space between lines
+   }
+  
+
+
+   line.string.split("").forEach((character) => {
+      var span = document.createElement("span");
+      span.textContent = character;
+      container.appendChild(span);
+      characters.push({
+         span: span,
+         isSpace: character === " " && !line.pause,
+         delayAfter: line.speed,
+         classes: line.classes || []
+      });
+   });
+});
+
+function revealOneCharacter(list) {
+   var next = list.splice(0, 1)[0];
+   next.span.classList.add("revealed");
+   next.classes.forEach((c) => {
+      next.span.classList.add(c);
+   });
+   var delay = next.isSpace && !next.pause ? 0 : next.delayAfter;
+
+   if (list.length > 0) {
+      setTimeout(function () {
+         revealOneCharacter(list);
+      }, delay);
+   }
+}
+
+//Kick it off
+setTimeout(() => {
+   revealOneCharacter(characters);   
+}, 200)
+
+
+
+
+
 
     const plantImage = document.querySelector('#sunflower');
     
@@ -581,8 +698,78 @@ function drop(event) {
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 3rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 10px 10px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
     correct++;
+
+    isWater = true;
+    toComplete = 158;
       
-  }else if(draggableElementData == "sun"){
+  }else if(draggableElementData == "sun" && isFertilizer == true && isSun == false && isCarbonDioxide == false && isWater == true) {
+
+
+    var speeds = {
+   pause: 100, //Higher number = longer delay
+   slow: 120,
+   normal: 90,
+   fast: 40,
+   superFast: 20
+};
+
+textLines = [
+   { speed: speeds.superFast, string: "Keep going!" },
+   { speed: speeds.pause, string: "", pause: true },
+   { speed: speeds.superFast, string: "You're almost there." }
+];
+
+
+var characters = [];
+textLines.forEach((line, index) => {
+   if (index < textLines.length - 1) {
+      line.string += " "; //Add a space between lines
+   }
+  
+
+
+   line.string.split("").forEach((character) => {
+      var span = document.createElement("span");
+      span.textContent = character;
+      container.appendChild(span);
+      characters.push({
+         span: span,
+         isSpace: character === " " && !line.pause,
+         delayAfter: line.speed,
+         classes: line.classes || []
+      });
+   });
+});
+
+function revealOneCharacter(list) {
+   var next = list.splice(0, 1)[0];
+   next.span.classList.add("revealed");
+   next.classes.forEach((c) => {
+      next.span.classList.add(c);
+   });
+   var delay = next.isSpace && !next.pause ? 0 : next.delayAfter;
+
+   if (list.length > 0) {
+      setTimeout(function () {
+         revealOneCharacter(list);
+      }, delay);
+   }
+}
+
+//Kick it off
+setTimeout(() => {
+   revealOneCharacter(characters);   
+}, 200)
+
+
+
+
+
+
+
+
+
+
 
     const plantImage = document.querySelector('#sunflower');
     
@@ -611,7 +798,7 @@ function drop(event) {
 
     const sunflower = document.querySelector('#sunflower');
     const images = document.querySelectorAll('.images');
-    const correctAudio = new Audio("/storage/audio/success.mp3" );
+
     const draggableElement = document.getElementById(draggableElementData);
     const text = draggableElement.innerText;
     const textTitle = document.querySelector('#textTitle');
@@ -622,11 +809,82 @@ function drop(event) {
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 3rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 10px 10px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
     correct++;
-      
-  }else if(draggableElementData == "carbon-dioxide"){
 
-    const plantImage = document.querySelector('#sunflower');
-    
+    isSun = true;
+    toComplete = 275;
+      
+  }else if(draggableElementData == "carbon-dioxide" && isFertilizer == true && isSun == true && isCarbonDioxide == false && isWater == true) {
+
+
+    var speeds = {
+   pause: 100, //Higher number = longer delay
+   slow: 120,
+   normal: 90,
+   fast: 40,
+   superFast: 20
+};
+
+textLines = [
+   { speed: speeds.superFast, string: "You did it!" },
+   { speed: speeds.pause, string: "", pause: true },
+   { speed: speeds.superFast, string: "You made the plant grow." }
+];
+
+
+var characters = [];
+textLines.forEach((line, index) => {
+   if (index < textLines.length - 1) {
+      line.string += " "; //Add a space between lines
+   }
+  
+
+
+   line.string.split("").forEach((character) => {
+      var span = document.createElement("span");
+      span.textContent = character;
+      container.appendChild(span);
+      characters.push({
+         span: span,
+         isSpace: character === " " && !line.pause,
+         delayAfter: line.speed,
+         classes: line.classes || []
+      });
+   });
+});
+
+function revealOneCharacter(list) {
+   var next = list.splice(0, 1)[0];
+   next.span.classList.add("revealed");
+   next.classes.forEach((c) => {
+      next.span.classList.add(c);
+   });
+   var delay = next.isSpace && !next.pause ? 0 : next.delayAfter;
+
+   if (list.length > 0) {
+      setTimeout(function () {
+         revealOneCharacter(list);
+      }, delay);
+   }
+}
+
+//Kick it off
+setTimeout(() => {
+   revealOneCharacter(characters);   
+}, 200)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const plantImage = document.querySelector('#sunflower');    
     //declare array
     const plantImageArrayFirst = [];
     var num;
@@ -663,9 +921,76 @@ function drop(event) {
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<div style="width:12rem; height: 3rem; margin-top: 2rem; border-radius: 6px; border-width: 2px; color:black; font-size: 13px; text-transform: uppercase; padding: 10px 10px;" class="bg-blue-400 border border-black rounded-md><span class="" style="color: black;">${text}</span></div>`);
     correct++;
-      
+
+    isCarbonDioxide = true;
+    toComplete = 420;
+
+ 
+
   }
   else{
+
+var speeds = {
+   pause: 100, //Higher number = longer delay
+   slow: 120,
+   normal: 90,
+   fast: 40,
+   superFast: 20
+};
+
+textLines = [
+   { speed: speeds.superFast, string: "Oops!" },
+   { speed: speeds.pause, string: "", pause: true },
+   { speed: speeds.superFast, string: "Try Again" }
+];
+
+
+var characters = [];
+textLines.forEach((line, index) => {
+   if (index < textLines.length - 1) {
+      line.string += " "; //Add a space between lines
+   }
+  
+
+
+   line.string.split("").forEach((character) => {
+      var span = document.createElement("span");
+      span.textContent = character;
+      container.appendChild(span);
+      characters.push({
+         span: span,
+         isSpace: character === " " && !line.pause,
+         delayAfter: line.speed,
+         classes: line.classes || []
+      });
+   });
+});
+
+function revealOneCharacter(list) {
+   var next = list.splice(0, 1)[0];
+   next.span.classList.add("revealed");
+   next.classes.forEach((c) => {
+      next.span.classList.add(c);
+   });
+   var delay = next.isSpace && !next.pause ? 0 : next.delayAfter;
+
+   if (list.length > 0) {
+      setTimeout(function () {
+         revealOneCharacter(list);
+      }, delay);
+   }
+}
+
+//Kick it off
+setTimeout(() => {
+   revealOneCharacter(characters);   
+}, 200)
+
+
+
+
+
+
     const xMax = 16;
     const audio = new Audio("/storage/audio/Quack.mp3" );
     playAudio(audio);
@@ -705,6 +1030,22 @@ function drop(event) {
       });
 
   }
+     if(toComplete == 420) {
+      const correctAudio = new Audio("/storage/audio/success.mp3" );
+      playAgainBtn.style.display = "block";
+    nextBtn.style.display = "block";
+    textTitle.innerText = "Good Job! You made the plant grow.";
+    setTimeout(() => {
+      playAudio(correctAudio);
+      playAgainBtn.classList.add("play-again-btn-entrance");
+      next.classList.add("next-entrance");
+       anime({
+            targets: [images],
+            scale: 1.25,
+            duration: 1000,
+            });
+    }, 50);
+    }
 }
 
 //function play audio
