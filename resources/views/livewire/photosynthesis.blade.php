@@ -15,7 +15,7 @@ body {
 
 #play-again-btn {
   position: absolute;
-  top: 2.0rem;
+  top: 1.0rem;
   left: 55%;
   margin-left: -50px;
   font-size: 1rem;
@@ -162,9 +162,9 @@ body {
 }
 </style>
 <div >
-    <div class="p-10">
+    <div class="p-5">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Drag the images on the right to help the plant grow.</h1>
+  <h1 id="textTitle" class="text-3xl mb-10 mx-14">Photosynthesis and Respiration</h1>
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   <section class="droppable-elements">
@@ -267,6 +267,66 @@ body {
 <script>
 
   $(window).on('load', function() {
+  var container = document.querySelector(".text");
+      var speeds = {
+   pause: 100, //Higher number = longer delay
+   slow: 120,
+   normal: 90,
+   fast: 40,
+   superFast: 20
+};
+
+textLines = [
+   { speed: speeds.superFast, string: "Help the plant grow!" },
+   { speed: speeds.pause, string: "", pause: true },
+   { speed: speeds.superFast, string: "Drag the images on the left to the plant." }
+];
+
+
+var characters = [];
+textLines.forEach((line, index) => {
+   if (index < textLines.length - 1) {
+      line.string += " "; //Add a space between lines
+   }
+  
+
+
+   line.string.split("").forEach((character) => {
+      var span = document.createElement("span");
+      span.textContent = character;
+      container.appendChild(span);
+      characters.push({
+         span: span,
+         isSpace: character === " " && !line.pause,
+         delayAfter: line.speed,
+         classes: line.classes || []
+      });
+   });
+});
+
+function revealOneCharacter(list) {
+   var next = list.splice(0, 1)[0];
+   next.span.classList.add("revealed");
+   next.classes.forEach((c) => {
+      next.span.classList.add(c);
+   });
+   var delay = next.isSpace && !next.pause ? 0 : next.delayAfter;
+
+   if (list.length > 0) {
+      setTimeout(function () {
+         revealOneCharacter(list);
+      }, delay);
+   }
+}
+
+//Kick it off
+setTimeout(() => {
+   revealOneCharacter(characters);   
+}, 200)
+    
+    
+    
+    
 
 
 
