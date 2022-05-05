@@ -30,7 +30,7 @@ class MainOptions extends Component
     }
 
     public function topic5(){
-        return redirect()->route('respiration');
+        return redirect()->route('photosynthesis');
     }
 
     public function topic6(){
