@@ -133,14 +133,31 @@ body {
   <h1 id="textTitle" class="text-3xl mb-10 mx-14">Getting started with this example.</h1>
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
-  <section class="droppable-elements flex justify-center bg-blue-600 border rounded-lg">
-  <video width="400" height="400" autoplay loop>
+  <section class="droppable-elements grid grid-cols-3 border rounded-lg" style="background-color: #1278dd">
+  <div class="col-span-1 grid content-end">
+    <div class="grid grid-cols-4">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    </div>
+</div>
+ <div class="col-span-1">
+<video width="400" height="400" autoplay loop>
   <source src="/storage/videos/nemo.mp4" type="video/mp4">
   {{-- <iframe class="" src="/storage/videos/nemo.mp4" type="video/mp4"></iframe> --}}
   {{-- <source src="movie.ogg" type="video/ogg"> --}}
   Your browser does not support the video tag.
 </video>
- 
+</div>
+ <div class="col-span-1 grid content-end">
+    <div class="grid grid-cols-4">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    <img class="col-span-1 w-24 h-24"style="color: #fff;" src="storage/images/vegetation.png" alt="Sun" draggable="false" id="sun">
+    </div>
+</div>
   </section>
   {{--<section class="draggable-element px-20">
   {{-- <div clas="w-96 h-36 bg-red-300">ss</div> 

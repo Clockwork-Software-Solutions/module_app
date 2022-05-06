@@ -924,6 +924,9 @@ select {
 .h-36 {
   height: 9rem;
 }
+.h-24 {
+  height: 6rem;
+}
 .min-h-full {
   min-height: 100%;
 }
@@ -956,6 +959,12 @@ select {
 }
 .w-96 {
   width: 24rem;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-24 {
+  width: 6rem;
 }
 .min-w-0 {
   min-width: 0px;
