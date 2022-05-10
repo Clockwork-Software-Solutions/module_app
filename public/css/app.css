@@ -855,8 +855,14 @@ select {
 .-mr-1 {
   margin-right: -0.25rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .mt-24 {
   margin-top: 6rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 .block {
   display: block;
@@ -959,9 +965,6 @@ select {
 }
 .w-96 {
   width: 24rem;
-}
-.w-8 {
-  width: 2rem;
 }
 .w-24 {
   width: 6rem;
@@ -1245,10 +1248,6 @@ select {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));

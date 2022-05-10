@@ -132,8 +132,10 @@ body {
 </style>
 <div >
     <div class="p-8">
-  <div class="flex">
-  <h1 id="textTitle" class="text-3xl mb-10 mx-14 ">Here's another symbiosis relatioship.</h1>
+  <div class="">
+  <h1 id="textTitle" class="text-3xl mb-4 mx-14 ">Here's another symbiosis relationship.</h1>
+      <p id="textTitleMin" class="text-sm mb-6 mx-14 ">Match the animal on the left column with it's possible symbiont in the right column.</p>
+
   <div class="">
         <button id="play-again-btn" class="mt-0 bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
