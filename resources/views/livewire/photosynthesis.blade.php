@@ -193,7 +193,7 @@ body {
     
     </div>
 
-    <div class="col-span-1 my-auto" style="background-color: #F5F4E0">
+    <div id="thisDiv" class="col-span-1 my-auto" style="background-color: #F5F4E0">
     <div class="droppable flex justify-center align">
     <img class="h-72 w-80" src="/storage/images/plant_grow/frame_000 (45).gif" alt="Grass" draggable="false" id="sunflower">
     </div>
@@ -264,9 +264,21 @@ body {
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+
 <script>
 
   $(window).on('load', function() {
+    const plantArrayImages = [];
+    //push images to array from 1 to 100
+    for (let i = 1; i <= 436; i++) {
+      plantArrayImages.push('/storage/images/plant_grow/frame_000 (' + i + ').gif');
+    }
+   
+   //get image id
+ 
+
+
+
   var container = document.querySelector(".text");
       var speeds = {
    pause: 100, //Higher number = longer delay
@@ -605,7 +617,8 @@ setTimeout(() => {
     //loop array
     for(let i = 45; i <= 128; i++) {
       num = i;
-      plantImageArrayFirst.push(num);
+     
+      plantImageArrayFirst.push('/storage/images/plant_grow/frame_000 (' + num + ').gif');
     }
     var request;
     var time = 0;
@@ -613,8 +626,8 @@ setTimeout(() => {
     const animate = () => {
       if (time <= plantImageArrayFirst.length-1){
         request = requestAnimationFrame(animate);
-        var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
-         plantImage.src = path;
+        //var path = '/storage/images/plant_grow/frame_000 ('+plantImageArrayFirst[time]+').gif';
+         plantImage.src = plantImageArrayFirst[time];
           time++;
           console.log(time);
       }else{
