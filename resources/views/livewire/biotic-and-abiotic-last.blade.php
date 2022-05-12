@@ -143,7 +143,8 @@ body {
 <div >
     <div class="p-6">
   <div class="flex">
-  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Now you try. Classify Biotic and Abiotic</h1>
+  <h1 id="textTitle" class="text-3xl mx-14 mb-10">Classify Biotic and Abiotic</h1>
+      {{-- <p id="textTitleMin" class="text-sm mb-6 mx-14 ">Drag the images in the right column to determine their classification.</p> --}}
         <button id="play-again-btn" class="bg-green-800 hover:bg-green-700">Play Again</button>
   </div>
   

@@ -13,6 +13,6 @@ class BioticAndAbioticVid extends Component
 
     public function proceed()
     {
-        return redirect()->route('biotic');
+        return redirect()->route('bioticLast');
     }
 }
