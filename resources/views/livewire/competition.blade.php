@@ -147,7 +147,7 @@ body {
     </div>
 
     <div class="border border-black p-10">  
-    <div class="droppable col-span-1" data-draggable-id="predation">
+    <div class="droppable col-span-1" data-draggable-id="predation2">
     <span id="elementText" class="" style="color: transparent; user-select:none;">Fighting Over Food</span>
     </div>
     </div>
@@ -162,7 +162,7 @@ body {
   <section class="draggable-elements px-20">
     {{-- <img class="draggable bg-white" style="color: #fff;" src="/storage/images/lion.png" alt="Lion" draggable="true"id="lion"> --}}
     <img class="draggable bg-white" style="color: #fff;" src="/storage/images/competition.png" alt="Goat" draggable="true" id="competition">
-    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/predation.png" alt="Plant" draggable="true" id="predation">
+    <img class="draggable bg-white" style="color: #fff;" src="/storage/images/predation2.png" alt="Plant" draggable="true" id="predation2">
 
   </section>
 

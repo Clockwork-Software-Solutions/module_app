@@ -39,6 +39,7 @@ Route::get('/Symbiosis&NonSymbiosis/bioticAndAbiotic', App\Http\Livewire\BioticA
 Route::get('/Symbiosis&NonSymbiosis/bioticAndAbioticLast', App\Http\Livewire\BioticAndAbioticLast::class)->name('bioticLast');
 Route::get('/Symbiosis&NonSymbiosis/bacteriaAndAnimals/intro', App\Http\Livewire\BacteriaVid::class)->name('bacteria_vid');
 Route::get('/Symbiosis&NonSymbiosis/bacteriaAndAnimals', App\Http\Livewire\BacteriaAndAnimals::class)->name('bacteria');
+Route::get('/Photosynthesis&Respiration/intro', App\Http\Livewire\PhotosythesisVid::class)->name('photosynthesis_vid');
 Route::get('/Photosynthesis&Respiration/Activity1', App\Http\Livewire\Photosynthesis::class)->name('photosynthesis');
 Route::get('/Photosynthesis&Respiration/Activity2', App\Http\Livewire\PhotoSynthesisAndRespiration::class)->name('respiration');
 Route::get('/OxygenCarbonDioxideCycle/intro', App\Http\Livewire\OxygenVid::class)->name('oxygen_vid');
