@@ -759,6 +759,9 @@ select {
 .ml-16 {
   margin-left: 4rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .ml-8 {
   margin-left: 2rem;
 }
@@ -776,9 +779,6 @@ select {
 }
 .mb-0 {
   margin-bottom: 0px;
-}
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 .mt-10 {
   margin-top: 2.5rem;

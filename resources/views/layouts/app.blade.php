@@ -24,11 +24,28 @@
             display: none !important;
         }
 
+
+        .loader {
+            
+            position: fixed;
+            margin: 0 auto;
+            padding-top: 12rem;
+            padding-left: 41.5%;
+            width: 100%;
+            height: 100%;
+            background-color: #f1f2f3;
+            z-index: 9998;
+            text-align: center;
+        }
+
     </style>
 
 </head>
 
 <body class="h-full bg-gray-100">
+    <div class ="loader">
+    <img src="{{asset('storage/videos/preloader.svg')}}"/>    
+    </div>
     <div class="min-h-full">
         
 
@@ -39,7 +56,15 @@
         </main>
         
     </div>
-    
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+       
+        //window on load fade out preloader
+        window.onload = function() {
+            $(".loader").fadeOut(500);
+        }
+    </script>
     @livewireScripts
     {{-- @livewireChartsScripts --}}
     
