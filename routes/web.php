@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', App\Http\Livewire\MainOptions::class)->name('main');
+Route::get('/', App\Http\Livewire\Start::class)->name('start');
+Route::get('/main', App\Http\Livewire\MainOptions::class)->name('main');
 Route::get('/FoodChain&FoodWeb/intro', App\Http\Livewire\FoodChainVid::class)->name('foodchain_vid');
 Route::get('/FoodChain&FoodWeb', App\Http\Livewire\FoodChain::class)->name('foodchain');
 Route::get('/FoodChain&FoodWeb/foodchain1', App\Http\Livewire\SecondActivity::class)->name('foodchain2');
